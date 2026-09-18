@@ -1,0 +1,5 @@
+actual,predicted,count
+Not readmitted,Not readmitted,1594
+Not readmitted,Readmitted,442
+Readmitted,Not readmitted,699
+Readmitted,Readmitted,865

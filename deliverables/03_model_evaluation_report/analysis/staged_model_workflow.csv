@@ -1,0 +1,6 @@
+Stage,Input,Purpose
+1. Broad risk screen,Risk deciles 8-10 and clinical rules,Maximize high-risk coverage
+2. Model score,Expanded clinical logistic model,Provide explainable pre-discharge risk estimate
+3. Clinical review,Care team judgment and patient context,Avoid single-model decision risk
+4. Intervention assignment,"Risk level, discharge plan, follow-up needs",Target support earlier and more consistently
+5. Monthly validation,"Recall, precision, intervention workload, outcomes",Balance missed risk and incorrect assignment
