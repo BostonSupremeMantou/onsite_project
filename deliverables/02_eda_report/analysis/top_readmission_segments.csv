@@ -1,0 +1,11 @@
+Segment Type,Segment,Patients,Readmission Rate,Average Total Care Cost
+Chronic condition bucket,5+,1317,62.3%,$25.3K
+Follow-up status,Unknown,2587,60.3%,$25.3K
+Prior admissions bucket,3+,3225,57.0%,$25.2K
+Discharge disposition,Skilled Nursing,1803,54.4%,$25.0K
+Age group,85+,949,54.3%,$25.4K
+Age group,75-84,1491,51.1%,$25.3K
+Admission type,Emergency,7095,50.9%,$25.3K
+Chronic condition bucket,3-4,4181,49.6%,$25.2K
+Age group,65-74,2393,48.0%,$25.3K
+Prior admissions bucket,2,3206,46.2%,$25.1K

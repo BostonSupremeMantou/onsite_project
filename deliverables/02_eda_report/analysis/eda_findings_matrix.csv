@@ -1,0 +1,6 @@
+Finding,Evidence,Use
+Unknown follow-up status carries elevated readmission risk.,"2,587 records lack follow-up status and the segment readmission rate is high.",Main caveat and care coordination question
+Chronic condition burden has a strong relationship with readmission.,5+ chronic condition bucket is the highest clinical segment.,Clinical Analytics page
+Prior admissions identify high-risk patients.,3+ prior admissions segment has materially elevated readmission rate.,Risk workflow and clinical rules
+Emergency admissions and skilled nursing discharges need focused review.,Both segments show elevated observed readmission rates.,Discharge review recommendation
+Financial fields support ROI planning but need quality flags.,Missing and negative financial values exist in source data.,Financial caveat
