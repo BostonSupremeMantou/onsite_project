@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="780" viewBox="0 0 1100 780">
+<rect width="100%" height="100%" fill="#ffffff"/>
+<style>
+.title{font-family:Arial,Helvetica,sans-serif;font-size:30px;font-weight:700;fill:#0f172a}
+.subtitle{font-family:Arial,Helvetica,sans-serif;font-size:16px;fill:#475569}
+.label{font-family:Arial,Helvetica,sans-serif;font-size:15px;fill:#334155}
+.small{font-family:Arial,Helvetica,sans-serif;font-size:13px;fill:#64748b}
+.value{font-family:Arial,Helvetica,sans-serif;font-size:15px;font-weight:700;fill:#0f172a}
+.kpi{font-family:Arial,Helvetica,sans-serif;font-size:34px;font-weight:700;fill:#0f172a}
+</style>
+<text x="48" y="52" class="title">Recommendation Priority Matrix</text>
+<text x="48" y="82" class="subtitle">Prioritize high-impact actions that can be implemented within the 12-month window.</text>
+<rect x="120" y="135" width="880" height="530" fill="#f8fafc" stroke="#cbd5e1"/>
+<line x1="296.0" y1="135" x2="296.0" y2="665" stroke="#e2e8f0"/>
+<line x1="120" y1="241.0" x2="1000" y2="241.0" stroke="#e2e8f0"/>
+<line x1="472.0" y1="135" x2="472.0" y2="665" stroke="#e2e8f0"/>
+<line x1="120" y1="347.0" x2="1000" y2="347.0" stroke="#e2e8f0"/>
+<line x1="648.0" y1="135" x2="648.0" y2="665" stroke="#e2e8f0"/>
+<line x1="120" y1="453.0" x2="1000" y2="453.0" stroke="#e2e8f0"/>
+<line x1="824.0" y1="135" x2="824.0" y2="665" stroke="#e2e8f0"/>
+<line x1="120" y1="559.0" x2="1000" y2="559.0" stroke="#e2e8f0"/>
+<text x="560.0" y="720" text-anchor="middle" class="label">Implementation effort</text>
+<text x="55" y="400.0" text-anchor="middle" class="label" transform="rotate(-90 55,400.0)">Expected impact</text>
+<circle cx="560.0" cy="188.0" r="16" fill="#2563eb" fill-opacity="0.88" stroke="#ffffff" stroke-width="3"/>
+<text x="584.0" y="193.0" class="small">Risk score</text>
+<circle cx="560.0" cy="294.0" r="16" fill="#0f766e" fill-opacity="0.88" stroke="#ffffff" stroke-width="3"/>
+<text x="584.0" y="299.0" class="small">Discharge review</text>
+<circle cx="384.0" cy="294.0" r="16" fill="#d97706" fill-opacity="0.88" stroke="#ffffff" stroke-width="3"/>
+<text x="408.0" y="299.0" class="small">Follow-up gaps</text>
+<circle cx="736.0" cy="188.0" r="16" fill="#dc2626" fill-opacity="0.88" stroke="#ffffff" stroke-width="3"/>
+<text x="760.0" y="193.0" class="small">Targeted care</text>
+<circle cx="384.0" cy="400.0" r="16" fill="#16a34a" fill-opacity="0.88" stroke="#ffffff" stroke-width="3"/>
+<text x="408.0" y="405.0" class="small">Dashboard</text>
+<text x="48" y="752" class="small">Scores are preliminary planning estimates based on observed impact, feasibility, and presentation requirements.</text>
+</svg>

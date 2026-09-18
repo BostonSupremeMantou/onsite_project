@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760">
+<rect width="100%" height="100%" fill="#ffffff"/>
+<style>
+.title{font-family:Arial,Helvetica,sans-serif;font-size:30px;font-weight:700;fill:#0f172a}
+.subtitle{font-family:Arial,Helvetica,sans-serif;font-size:16px;fill:#475569}
+.label{font-family:Arial,Helvetica,sans-serif;font-size:15px;fill:#334155}
+.small{font-family:Arial,Helvetica,sans-serif;font-size:13px;fill:#64748b}
+.value{font-family:Arial,Helvetica,sans-serif;font-size:15px;font-weight:700;fill:#0f172a}
+.kpi{font-family:Arial,Helvetica,sans-serif;font-size:34px;font-weight:700;fill:#0f172a}
+</style>
+<text x="48" y="52" class="title">Model Performance Comparison</text>
+<text x="48" y="82" class="subtitle">Holdout-set metrics at a 0.50 classification threshold.</text>
+<line x1="330" y1="108" x2="1030" y2="108" stroke="#e2e8f0" stroke-width="1"/>
+<text x="48" y="148" class="label">Baseline numeric clinical - Recall</text>
+<rect x="330" y="128" width="700" height="28" rx="4" fill="#f1f5f9"/>
+<rect x="330" y="128" width="350.9" height="28" rx="4" fill="#2563eb"/>
+<text x="1048" y="148" class="value">50.1%</text>
+<text x="48" y="206" class="label">Expanded clinical - Recall</text>
+<rect x="330" y="186" width="700" height="28" rx="4" fill="#f1f5f9"/>
+<rect x="330" y="186" width="387.1" height="28" rx="4" fill="#2563eb"/>
+<text x="1048" y="206" class="value">55.3%</text>
+<text x="48" y="264" class="label">Baseline numeric clinical - F1 Score</text>
+<rect x="330" y="244" width="700" height="28" rx="4" fill="#f1f5f9"/>
+<rect x="330" y="244" width="391.7" height="28" rx="4" fill="#2563eb"/>
+<text x="1048" y="264" class="value">56.0%</text>
+<text x="48" y="322" class="label">Expanded clinical - F1 Score</text>
+<rect x="330" y="302" width="700" height="28" rx="4" fill="#f1f5f9"/>
+<rect x="330" y="302" width="421.8" height="28" rx="4" fill="#2563eb"/>
+<text x="1048" y="322" class="value">60.3%</text>
+<text x="48" y="380" class="label">Baseline numeric clinical - Precision</text>
+<rect x="330" y="360" width="700" height="28" rx="4" fill="#f1f5f9"/>
+<rect x="330" y="360" width="443.3" height="28" rx="4" fill="#2563eb"/>
+<text x="1048" y="380" class="value">63.3%</text>
+<text x="48" y="438" class="label">Baseline numeric clinical - Accuracy</text>
+<rect x="330" y="418" width="700" height="28" rx="4" fill="#f1f5f9"/>
+<rect x="330" y="418" width="460.1" height="28" rx="4" fill="#2563eb"/>
+<text x="1048" y="438" class="value">65.7%</text>
+<text x="48" y="496" class="label">Expanded clinical - Precision</text>
+<rect x="330" y="476" width="700" height="28" rx="4" fill="#f1f5f9"/>
+<rect x="330" y="476" width="463.3" height="28" rx="4" fill="#2563eb"/>
+<text x="1048" y="496" class="value">66.2%</text>
+<text x="48" y="554" class="label">Expanded clinical - Accuracy</text>
+<rect x="330" y="534" width="700" height="28" rx="4" fill="#f1f5f9"/>
+<rect x="330" y="534" width="478.1" height="28" rx="4" fill="#2563eb"/>
+<text x="1048" y="554" class="value">68.3%</text>
+<text x="48" y="612" class="label">Baseline numeric clinical - Roc Auc</text>
+<rect x="330" y="592" width="700" height="28" rx="4" fill="#f1f5f9"/>
+<rect x="330" y="592" width="495.0" height="28" rx="4" fill="#2563eb"/>
+<text x="1048" y="612" class="value">70.7%</text>
+<text x="48" y="670" class="label">Expanded clinical - Roc Auc</text>
+<rect x="330" y="650" width="700" height="28" rx="4" fill="#f1f5f9"/>
+<rect x="330" y="650" width="517.8" height="28" rx="4" fill="#2563eb"/>
+<text x="1048" y="670" class="value">74.0%</text>
+<text x="48" y="732" class="small">Source: Cleaned NHN patient-level analysis dataset.</text>
+</svg>

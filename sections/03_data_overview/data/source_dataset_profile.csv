@@ -1,0 +1,4 @@
+dataset,rows,unique_patient_ids,key_fields
+Patient Readmission,12000,12000,"Clinical risk, admission, discharge, and readmission outcome"
+Financial Impact,12000,12000,"Readmission cost, reimbursement, penalties, length-of-stay cost, total care cost"
+Care Coordination,12000,12000,"Care coordinator assignment, follow-up, medication review, home health, transportation, calls"

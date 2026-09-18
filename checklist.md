@@ -9,11 +9,12 @@
 - [x] Cleaned CSV outputs created under `data/cleaned/`.
 - [x] Integrated patient-level analysis table created at `data/processed/nhn_patient_level_analysis.csv`.
 - [x] Data cleaning notes created in `DATA_CLEANING_SUMMARY.md`.
-- [ ] Exploratory data analysis completed.
-- [ ] Predictive models completed and compared.
-- [ ] Care coordination effectiveness analysis completed.
-- [ ] Financial impact and ROI scenarios completed.
-- [ ] Executive dashboard completed.
+- [x] Preliminary exploratory data analysis assets generated.
+- [x] Preliminary predictive models completed and compared.
+- [x] Preliminary care coordination effectiveness analysis assets generated.
+- [x] Preliminary financial impact and ROI scenario assets generated.
+- [x] Tableau or Power BI dashboard-ready data and build guide created.
+- [ ] Native Tableau or Power BI dashboard completed.
 - [ ] Final Board presentation completed.
 
 ## Data Cleaning Checklist
@@ -82,7 +83,8 @@ Data and evidence needed:
 Status:
 
 - [x] Project problem defined from PDFs.
-- [ ] Final findings needed from EDA, modeling, intervention analysis, and ROI analysis.
+- [x] Preliminary findings generated from EDA, modeling, intervention analysis, and ROI analysis.
+- [ ] Final executive summary needs to be updated after the Tableau or Power BI dashboard is built.
 
 ### 2. Business Problem
 
@@ -104,7 +106,7 @@ Status:
 
 - [x] PDF context captured.
 - [x] Current dataset readmission rate identified.
-- [ ] Detailed business problem visuals needed.
+- [x] Detailed business problem visuals generated.
 
 ### 3. Data Overview
 
@@ -128,7 +130,7 @@ Status:
 - [x] Data dictionary reviewed.
 - [x] Cleaning outputs created.
 - [x] Join integrity validated.
-- [ ] Final data overview slide/table needed.
+- [x] Data overview tables and visuals generated.
 
 ### 4. Clinical Analysis
 
@@ -157,8 +159,8 @@ Data and evidence needed:
 Status:
 
 - [x] Segmentation fields added in cleaned data.
-- [ ] Clinical EDA visuals needed.
-- [ ] Clinical interpretation needed.
+- [x] Clinical EDA visuals generated.
+- [x] Preliminary clinical interpretation drafted.
 
 ### 5. Predictive Modeling Results
 
@@ -184,10 +186,11 @@ Data and evidence needed:
 Status:
 
 - [x] Analysis-ready master dataset created.
-- [ ] Modeling feature set needs to be finalized.
-- [ ] Baseline model needed.
-- [ ] Advanced model needed.
-- [ ] Model evaluation needed.
+- [x] Preliminary modeling feature set defined.
+- [x] Baseline model generated.
+- [x] Expanded clinical model generated.
+- [x] Model evaluation generated.
+- [ ] Final model threshold needs to be selected for operational use.
 
 ### 6. Care Coordination Analysis
 
@@ -212,8 +215,9 @@ Status:
 
 - [x] Care coordination fields cleaned.
 - [x] Intervention count fields created.
-- [ ] Care coordination effectiveness analysis needed.
-- [ ] Quantitative recommendation evidence needed.
+- [x] Preliminary care coordination effectiveness analysis generated.
+- [x] Quantitative recommendation evidence drafted.
+- [ ] Causal interpretation caveat needs to remain in final presentation.
 
 ### 7. Financial Impact Analysis
 
@@ -237,8 +241,9 @@ Status:
 
 - [x] Financial fields cleaned and quality flags created.
 - [x] Nonnegative companion fields created for questionable financial values.
-- [ ] Financial EDA needed.
-- [ ] Scenario assumptions needed.
+- [x] Preliminary financial EDA generated.
+- [x] Preliminary scenario assumptions generated.
+- [ ] Scenario assumptions need final review before Board presentation.
 
 ### 8. Executive Dashboard Walkthrough
 
@@ -264,9 +269,13 @@ Dashboard KPIs needed:
 Status:
 
 - [x] Clean integrated data table created.
-- [ ] Dashboard wireframe needed.
-- [ ] Tableau or Power BI build needed.
-- [ ] Dashboard screenshots or walkthrough script needed.
+- [x] Dashboard-ready extract created.
+- [x] Dashboard KPI definitions created.
+- [x] Dashboard wireframe created.
+- [x] Tableau or Power BI build guide created.
+- [ ] Native Tableau or Power BI build needed.
+- [ ] Dashboard screenshots needed after native dashboard build.
+- [x] Dashboard walkthrough script drafted.
 
 ### 9. Strategic Recommendations
 
@@ -289,7 +298,8 @@ Evidence needed:
 
 Status:
 
-- [ ] Recommendations need to be derived after EDA, modeling, care coordination, and financial analysis.
+- [x] Preliminary recommendations derived from EDA, modeling, care coordination, and financial analysis.
+- [ ] Final recommendation language should be reviewed after dashboard build.
 
 ### 10. Financial Impact And ROI Analysis
 
@@ -313,9 +323,10 @@ Scenario content needed:
 Status:
 
 - [x] Cleaned financial data available.
-- [ ] Scenario model needed.
-- [ ] Implementation cost assumptions needed.
-- [ ] ROI outputs needed.
+- [x] Preliminary scenario model generated.
+- [x] Placeholder implementation cost assumptions created.
+- [x] ROI outputs generated.
+- [ ] Implementation cost assumptions need validation before final presentation.
 
 ### 11. Implementation Roadmap
 
@@ -340,7 +351,8 @@ Likely roadmap themes:
 
 Status:
 
-- [ ] Roadmap needs to be built after recommendations are finalized.
+- [x] Preliminary roadmap generated.
+- [ ] Roadmap needs final review after recommendations are finalized.
 
 ## Deliverables Checklist
 

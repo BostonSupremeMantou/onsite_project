@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="498" viewBox="0 0 1200 498">
+<rect width="100%" height="100%" fill="#ffffff"/>
+<style>
+.title{font-family:Arial,Helvetica,sans-serif;font-size:30px;font-weight:700;fill:#0f172a}
+.subtitle{font-family:Arial,Helvetica,sans-serif;font-size:16px;fill:#475569}
+.label{font-family:Arial,Helvetica,sans-serif;font-size:15px;fill:#334155}
+.small{font-family:Arial,Helvetica,sans-serif;font-size:13px;fill:#64748b}
+.value{font-family:Arial,Helvetica,sans-serif;font-size:15px;font-weight:700;fill:#0f172a}
+.kpi{font-family:Arial,Helvetica,sans-serif;font-size:34px;font-weight:700;fill:#0f172a}
+</style>
+<text x="48" y="52" class="title">Readmission Rate Among Patients Receiving Each Intervention</text>
+<text x="48" y="82" class="subtitle">Observed rates are not causal because high-risk patients may be more likely to receive support.</text>
+<line x1="330" y1="108" x2="1030" y2="108" stroke="#e2e8f0" stroke-width="1"/>
+<text x="48" y="148" class="label">Home health referral</text>
+<rect x="330" y="128" width="700" height="28" rx="4" fill="#f1f5f9"/>
+<rect x="330" y="128" width="578.8" height="28" rx="4" fill="#2563eb"/>
+<text x="1048" y="148" class="value">43.0%</text>
+<text x="48" y="206" class="label">Transportation assistance</text>
+<rect x="330" y="186" width="700" height="28" rx="4" fill="#f1f5f9"/>
+<rect x="330" y="186" width="579.6" height="28" rx="4" fill="#2563eb"/>
+<text x="1048" y="206" class="value">43.1%</text>
+<text x="48" y="264" class="label">Follow-up completed</text>
+<rect x="330" y="244" width="700" height="28" rx="4" fill="#f1f5f9"/>
+<rect x="330" y="244" width="582.0" height="28" rx="4" fill="#2563eb"/>
+<text x="1048" y="264" class="value">43.2%</text>
+<text x="48" y="322" class="label">Any post-discharge call</text>
+<rect x="330" y="302" width="700" height="28" rx="4" fill="#f1f5f9"/>
+<rect x="330" y="302" width="587.4" height="28" rx="4" fill="#2563eb"/>
+<text x="1048" y="322" class="value">43.6%</text>
+<text x="48" y="380" class="label">Care coordinator assigned</text>
+<rect x="330" y="360" width="700" height="28" rx="4" fill="#f1f5f9"/>
+<rect x="330" y="360" width="587.9" height="28" rx="4" fill="#2563eb"/>
+<text x="1048" y="380" class="value">43.7%</text>
+<text x="48" y="438" class="label">Medication review completed</text>
+<rect x="330" y="418" width="700" height="28" rx="4" fill="#f1f5f9"/>
+<rect x="330" y="418" width="592.2" height="28" rx="4" fill="#2563eb"/>
+<text x="1048" y="438" class="value">44.0%</text>
+<text x="48" y="470" class="small">Source: Cleaned NHN patient-level analysis dataset.</text>
+</svg>

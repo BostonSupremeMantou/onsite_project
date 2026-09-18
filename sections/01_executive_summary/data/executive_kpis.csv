@@ -1,0 +1,7 @@
+metric,value,display_value
+Analytical dataset patients,12000.0,"12,000"
+Readmitted within 30 days,5184.0,"5,184"
+Analytical dataset readmission rate,0.432,43.2%
+Total care cost in cleaned dataset,303126133.99,$303.1M
+CMS penalty exposure in cleaned dataset,21247891.9,$21.2M
+Average net reimbursement gap,11328.0701858953,$11.3K

@@ -1,0 +1,13 @@
+dataset,issue,affected_rows,affected_rate
+Patient,Missing follow-up status,2587,0.21558333333333332
+Patient,Missing insurance type,240,0.02
+Patient,Missing length of stay,240,0.02
+Financial,Missing penalty cost,240,0.02
+Financial,Missing follow-up program cost,240,0.02
+Care Coordination,Missing follow-up days,180,0.015
+Care Coordination,Missing post-discharge calls,180,0.015
+Financial,Negative penalty cost,49,0.004083333333333333
+Financial,Negative follow-up program cost,15,0.00125
+Financial,Negative readmission cost,4,0.0003333333333333333
+Financial,Negative reimbursement amount,4,0.0003333333333333333
+Financial,Negative length-of-stay cost,4,0.0003333333333333333

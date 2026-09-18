@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="650" viewBox="0 0 1200 650">
+<rect width="100%" height="100%" fill="#ffffff"/>
+<style>
+.title{font-family:Arial,Helvetica,sans-serif;font-size:30px;font-weight:700;fill:#0f172a}
+.subtitle{font-family:Arial,Helvetica,sans-serif;font-size:16px;fill:#475569}
+.label{font-family:Arial,Helvetica,sans-serif;font-size:15px;fill:#334155}
+.small{font-family:Arial,Helvetica,sans-serif;font-size:13px;fill:#64748b}
+.value{font-family:Arial,Helvetica,sans-serif;font-size:15px;font-weight:700;fill:#0f172a}
+.kpi{font-family:Arial,Helvetica,sans-serif;font-size:34px;font-weight:700;fill:#0f172a}
+</style>
+<text x="48" y="52" class="title">Data Integration Flow</text>
+<text x="48" y="82" class="subtitle">Three source datasets connect through patient_id.</text>
+<rect x="70" y="155" width="275" height="120" rx="10" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.5"/>
+<text x="90" y="197" class="value">Patient Readmission</text>
+<text x="90" y="227" class="small">Clinical risk and outcome</text>
+<text x="90" y="247" class="small">fields</text>
+<rect x="70" y="340" width="275" height="120" rx="10" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.5"/>
+<text x="90" y="382" class="value">Care Coordination</text>
+<text x="90" y="412" class="small">Post-discharge intervention</text>
+<text x="90" y="432" class="small">fields</text>
+<rect x="70" y="525" width="275" height="120" rx="10" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.5"/>
+<text x="90" y="567" class="value">Financial Impact</text>
+<text x="90" y="597" class="small">Cost, reimbursement, and</text>
+<text x="90" y="617" class="small">penalty fields</text>
+<rect x="470" y="335" width="290" height="145" rx="10" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.5"/>
+<text x="490" y="377" class="value">Integrated Analysis Table</text>
+<text x="490" y="407" class="small">12,000 patient records</text>
+<text x="490" y="427" class="small">joined on patient_id</text>
+<rect x="875" y="335" width="260" height="145" rx="10" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.5"/>
+<text x="895" y="377" class="value">Section Assets</text>
+<text x="895" y="407" class="small">Summary tables, charts,</text>
+<text x="895" y="427" class="small">notes, and dashboard</text>
+<text x="895" y="447" class="small">extracts</text>
+<path d="M350 215 C410 215, 410 407, 468 407" fill="none" stroke="#2563eb" stroke-width="3"/>
+<polygon points="468,407 456,400 456,414" fill="#2563eb"/>
+<path d="M350 400 C410 400, 410 407, 468 407" fill="none" stroke="#2563eb" stroke-width="3"/>
+<polygon points="468,407 456,400 456,414" fill="#2563eb"/>
+<path d="M350 585 C410 585, 410 407, 468 407" fill="none" stroke="#2563eb" stroke-width="3"/>
+<polygon points="468,407 456,400 456,414" fill="#2563eb"/>
+<path d="M762 407 L872 407" fill="none" stroke="#0f766e" stroke-width="3"/>
+<polygon points="872,407 860,400 860,414" fill="#0f766e"/>
+<text x="48" y="622" class="small">Source: NHN CSV files and cleaned patient-level analysis dataset.</text>
+</svg>

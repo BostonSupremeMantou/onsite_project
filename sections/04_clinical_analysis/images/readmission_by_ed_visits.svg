@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="420" viewBox="0 0 1200 420">
+<rect width="100%" height="100%" fill="#ffffff"/>
+<style>
+.title{font-family:Arial,Helvetica,sans-serif;font-size:30px;font-weight:700;fill:#0f172a}
+.subtitle{font-family:Arial,Helvetica,sans-serif;font-size:16px;fill:#475569}
+.label{font-family:Arial,Helvetica,sans-serif;font-size:15px;fill:#334155}
+.small{font-family:Arial,Helvetica,sans-serif;font-size:13px;fill:#64748b}
+.value{font-family:Arial,Helvetica,sans-serif;font-size:15px;font-weight:700;fill:#0f172a}
+.kpi{font-family:Arial,Helvetica,sans-serif;font-size:34px;font-weight:700;fill:#0f172a}
+</style>
+<text x="48" y="52" class="title">Readmission Rate By ED Utilization</text>
+<text x="48" y="82" class="subtitle">Rates calculated from the cleaned integrated patient-level table.</text>
+<line x1="330" y1="108" x2="1030" y2="108" stroke="#e2e8f0" stroke-width="1"/>
+<text x="48" y="148" class="label">1</text>
+<rect x="330" y="128" width="700" height="28" rx="4" fill="#f1f5f9"/>
+<rect x="330" y="128" width="455.8" height="28" rx="4" fill="#0f766e"/>
+<text x="1048" y="148" class="value">42.3%</text>
+<text x="48" y="206" class="label">0</text>
+<rect x="330" y="186" width="700" height="28" rx="4" fill="#f1f5f9"/>
+<rect x="330" y="186" width="456.4" height="28" rx="4" fill="#0f766e"/>
+<text x="1048" y="206" class="value">42.4%</text>
+<text x="48" y="264" class="label">3+</text>
+<rect x="330" y="244" width="700" height="28" rx="4" fill="#f1f5f9"/>
+<rect x="330" y="244" width="471.9" height="28" rx="4" fill="#0f766e"/>
+<text x="1048" y="264" class="value">43.8%</text>
+<text x="48" y="322" class="label">2</text>
+<rect x="330" y="302" width="700" height="28" rx="4" fill="#f1f5f9"/>
+<rect x="330" y="302" width="479.6" height="28" rx="4" fill="#0f766e"/>
+<text x="1048" y="322" class="value">44.5%</text>
+<text x="48" y="392" class="small">Source: Cleaned NHN patient-level analysis dataset.</text>
+</svg>

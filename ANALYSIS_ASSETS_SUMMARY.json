@@ -1,0 +1,9 @@
+{
+  "generated_by": "scripts/generate_section_assets.py",
+  "primary_dataset": "data/processed/nhn_patient_level_analysis.csv",
+  "section_count": 11,
+  "total_patients": 12000,
+  "readmission_rate": 0.432,
+  "expanded_model_roc_auc": 0.7396482873494491,
+  "expected_roi_net_savings": 8809390.241701389
+}

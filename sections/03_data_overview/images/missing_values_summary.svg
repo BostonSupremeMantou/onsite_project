@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="614" viewBox="0 0 1200 614">
+<rect width="100%" height="100%" fill="#ffffff"/>
+<style>
+.title{font-family:Arial,Helvetica,sans-serif;font-size:30px;font-weight:700;fill:#0f172a}
+.subtitle{font-family:Arial,Helvetica,sans-serif;font-size:16px;fill:#475569}
+.label{font-family:Arial,Helvetica,sans-serif;font-size:15px;fill:#334155}
+.small{font-family:Arial,Helvetica,sans-serif;font-size:13px;fill:#64748b}
+.value{font-family:Arial,Helvetica,sans-serif;font-size:15px;font-weight:700;fill:#0f172a}
+.kpi{font-family:Arial,Helvetica,sans-serif;font-size:34px;font-weight:700;fill:#0f172a}
+</style>
+<text x="48" y="52" class="title">Largest Data Quality Flags</text>
+<text x="48" y="82" class="subtitle">Flags preserve raw values while identifying records needing caution.</text>
+<line x1="330" y1="108" x2="1030" y2="108" stroke="#e2e8f0" stroke-width="1"/>
+<text x="48" y="148" class="label">Negative penalty cost</text>
+<rect x="330" y="128" width="700" height="28" rx="4" fill="#f1f5f9"/>
+<rect x="330" y="128" width="13.3" height="28" rx="4" fill="#d97706"/>
+<text x="1048" y="148" class="value">49</text>
+<text x="48" y="206" class="label">Missing follow-up days</text>
+<rect x="330" y="186" width="700" height="28" rx="4" fill="#f1f5f9"/>
+<rect x="330" y="186" width="48.7" height="28" rx="4" fill="#d97706"/>
+<text x="1048" y="206" class="value">180</text>
+<text x="48" y="264" class="label">Missing post-discharge calls</text>
+<rect x="330" y="244" width="700" height="28" rx="4" fill="#f1f5f9"/>
+<rect x="330" y="244" width="48.7" height="28" rx="4" fill="#d97706"/>
+<text x="1048" y="264" class="value">180</text>
+<text x="48" y="322" class="label">Missing insurance type</text>
+<rect x="330" y="302" width="700" height="28" rx="4" fill="#f1f5f9"/>
+<rect x="330" y="302" width="64.9" height="28" rx="4" fill="#d97706"/>
+<text x="1048" y="322" class="value">240</text>
+<text x="48" y="380" class="label">Missing length of stay</text>
+<rect x="330" y="360" width="700" height="28" rx="4" fill="#f1f5f9"/>
+<rect x="330" y="360" width="64.9" height="28" rx="4" fill="#d97706"/>
+<text x="1048" y="380" class="value">240</text>
+<text x="48" y="438" class="label">Missing penalty cost</text>
+<rect x="330" y="418" width="700" height="28" rx="4" fill="#f1f5f9"/>
+<rect x="330" y="418" width="64.9" height="28" rx="4" fill="#d97706"/>
+<text x="1048" y="438" class="value">240</text>
+<text x="48" y="496" class="label">Missing follow-up program cost</text>
+<rect x="330" y="476" width="700" height="28" rx="4" fill="#f1f5f9"/>
+<rect x="330" y="476" width="64.9" height="28" rx="4" fill="#d97706"/>
+<text x="1048" y="496" class="value">240</text>
+<text x="48" y="554" class="label">Missing follow-up status</text>
+<rect x="330" y="534" width="700" height="28" rx="4" fill="#f1f5f9"/>
+<rect x="330" y="534" width="700.0" height="28" rx="4" fill="#d97706"/>
+<text x="1048" y="554" class="value">2,587</text>
+<text x="48" y="586" class="small">Source: Cleaned NHN patient-level analysis dataset.</text>
+</svg>
