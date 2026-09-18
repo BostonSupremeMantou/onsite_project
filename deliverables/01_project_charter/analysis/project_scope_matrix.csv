@@ -1,0 +1,6 @@
+Workstream,In Scope,Out Of Scope
+Clinical analysis,Readmission patterns by patient segment,Clinical protocol design
+Predictive modeling,Pre-discharge risk scoring and staged workflow,Production clinical decision support deployment
+Care coordination,Observed intervention patterns and redesign opportunities,Causal intervention trial
+Financial impact,Cost exposure and ROI scenarios,Final budget approval
+Dashboard,Tableau-first build package and validation targets,Native Tableau Desktop build in this repository
