@@ -1,16 +1,16 @@
 # Clinical And Care Coordination Report Checklist
 
-- [ ] Identify highest-risk age groups.
-- [ ] Identify highest-risk diagnosis categories.
-- [ ] Analyze chronic condition burden.
-- [ ] Analyze prior admissions and ED utilization.
-- [ ] Analyze discharge disposition.
-- [ ] Evaluate care coordinator assignment.
-- [ ] Evaluate follow-up completion.
-- [ ] Evaluate medication review.
-- [ ] Evaluate home health referral.
-- [ ] Evaluate transportation assistance.
-- [ ] Evaluate post-discharge calls.
-- [ ] Include selection-bias caveat for intervention comparisons.
-- [ ] Recommend interventions to expand or redesign.
-- [ ] Move final report to `final/`.
+- [x] Identify highest-risk age groups.
+- [x] Identify highest-risk diagnosis categories.
+- [x] Analyze chronic condition burden.
+- [x] Analyze prior admissions and ED utilization.
+- [x] Analyze discharge disposition.
+- [x] Evaluate care coordinator assignment.
+- [x] Evaluate follow-up completion.
+- [x] Evaluate medication review.
+- [x] Evaluate home health referral.
+- [x] Evaluate transportation assistance.
+- [x] Evaluate post-discharge calls.
+- [x] Include selection-bias caveat for intervention comparisons.
+- [x] Recommend interventions to expand or redesign.
+- [x] Move final report to `final/`.

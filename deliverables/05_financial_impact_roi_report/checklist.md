@@ -1,16 +1,16 @@
 # Financial Impact And ROI Report Checklist
 
-- [ ] Summarize current financial baseline.
-- [ ] Summarize total care cost.
-- [ ] Summarize CMS penalty exposure.
-- [ ] Summarize readmission cost exposure.
-- [ ] Document financial data quality limitations.
-- [ ] Define implementation cost assumptions.
-- [ ] Build conservative scenario.
-- [ ] Build expected scenario.
-- [ ] Build optimistic scenario.
-- [ ] Calculate gross savings.
-- [ ] Calculate net savings.
-- [ ] Calculate ROI.
-- [ ] Identify payback period if assumptions support it.
-- [ ] Move final report to `final/`.
+- [x] Summarize current financial baseline.
+- [x] Summarize total care cost.
+- [x] Summarize CMS penalty exposure.
+- [x] Summarize readmission cost exposure.
+- [x] Document financial data quality limitations.
+- [x] Define implementation cost assumptions.
+- [x] Build conservative scenario.
+- [x] Build expected scenario.
+- [x] Build optimistic scenario.
+- [x] Calculate gross savings.
+- [x] Calculate net savings.
+- [x] Calculate ROI.
+- [x] Identify payback period if assumptions support it.
+- [x] Move final report to `final/`.

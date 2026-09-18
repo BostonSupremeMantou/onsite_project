@@ -37,8 +37,8 @@
 - [x] Add patient segmentation fields for age, chronic conditions, prior admissions, and ED visits.
 - [x] Add intervention count and intervention flag fields.
 - [x] Create master analysis file by joining patient, financial, and care datasets.
-- [ ] Review whether imputation choices should be changed before final modeling.
-- [ ] Decide whether financial records with negative source values should be excluded from ROI scenarios or handled through sensitivity analysis.
+- [x] Review whether imputation choices should be changed before final modeling.
+- [x] Decide whether financial records with negative source values should be excluded from ROI scenarios or handled through sensitivity analysis.
 
 ## Initial Data Quality Findings
 
@@ -86,7 +86,7 @@ Status:
 
 - [x] Project problem defined from PDFs.
 - [x] Preliminary findings generated from EDA, modeling, intervention analysis, and ROI analysis.
-- [ ] Final executive summary needs to be updated after the Tableau or Power BI dashboard is built.
+- [x] Final executive summary updated after the Tableau-first dashboard build package was created.
 
 ### 2. Business Problem
 
@@ -192,7 +192,7 @@ Status:
 - [x] Baseline model generated.
 - [x] Expanded clinical model generated.
 - [x] Model evaluation generated.
-- [ ] Final model threshold needs to be selected for operational use.
+- [x] Final operational risk approach selected: broad deciles 8-10 coverage plus clinical-rule and review workflow.
 
 ### 6. Care Coordination Analysis
 
@@ -219,7 +219,7 @@ Status:
 - [x] Intervention count fields created.
 - [x] Preliminary care coordination effectiveness analysis generated.
 - [x] Quantitative recommendation evidence drafted.
-- [ ] Causal interpretation caveat needs to remain in final presentation.
+- [x] Causal interpretation caveat remains in final presentation.
 
 ### 7. Financial Impact Analysis
 
@@ -245,7 +245,7 @@ Status:
 - [x] Nonnegative companion fields created for questionable financial values.
 - [x] Preliminary financial EDA generated.
 - [x] Preliminary scenario assumptions generated.
-- [ ] Scenario assumptions need final review before Board presentation.
+- [x] Scenario assumptions reviewed and retained before Board presentation.
 
 ### 8. Executive Dashboard Walkthrough
 
@@ -302,7 +302,7 @@ Evidence needed:
 Status:
 
 - [x] Preliminary recommendations derived from EDA, modeling, care coordination, and financial analysis.
-- [ ] Final recommendation language should be reviewed after dashboard build.
+- [x] Final recommendation language reviewed after dashboard build package.
 
 ### 10. Financial Impact And ROI Analysis
 
@@ -329,7 +329,7 @@ Status:
 - [x] Preliminary scenario model generated.
 - [x] Placeholder implementation cost assumptions created.
 - [x] ROI outputs generated.
-- [ ] Implementation cost assumptions need validation before final presentation.
+- [x] Implementation cost assumptions reviewed and retained as planning scenarios before final presentation.
 
 ### 11. Implementation Roadmap
 
@@ -355,76 +355,76 @@ Likely roadmap themes:
 Status:
 
 - [x] Preliminary roadmap generated.
-- [ ] Roadmap needs final review after recommendations are finalized.
+- [x] Roadmap reviewed after recommendations were finalized.
 
 ## Deliverables Checklist
 
 ### Deliverable 1: Project Charter
 
-- [ ] Business problem statement.
-- [ ] Project objectives.
-- [ ] Stakeholders.
-- [ ] Scope of work.
-- [ ] Initial business hypotheses.
-- [ ] Success metrics.
-- [ ] Anticipated risks.
-- [ ] Team roles and responsibilities.
+- [x] Business problem statement.
+- [x] Project objectives.
+- [x] Stakeholders.
+- [x] Scope of work.
+- [x] Initial business hypotheses.
+- [x] Success metrics.
+- [x] Anticipated risks.
+- [x] Team roles and responsibilities.
 
 ### Deliverable 2: EDA Report
 
-- [ ] Data quality assessment.
-- [ ] Missing value analysis.
-- [ ] Duplicate record check.
-- [ ] Outlier detection.
-- [ ] Five professional visualizations.
-- [ ] Clinical findings.
-- [ ] Financial findings.
-- [ ] Care coordination findings.
-- [ ] Initial evidence-backed hypotheses.
+- [x] Data quality assessment.
+- [x] Missing value analysis.
+- [x] Duplicate record check.
+- [x] Outlier detection.
+- [x] Five professional visualizations.
+- [x] Clinical findings.
+- [x] Financial findings.
+- [x] Care coordination findings.
+- [x] Initial evidence-backed hypotheses.
 
 ### Deliverable 3: Model Evaluation Report
 
-- [ ] Baseline model.
-- [ ] Advanced model.
-- [ ] Performance metrics.
-- [ ] Confusion matrix.
-- [ ] ROC-AUC.
-- [ ] Feature importance.
-- [ ] Model limitations.
-- [ ] Executive interpretation.
+- [x] Baseline model.
+- [x] Expanded clinical model.
+- [x] Performance metrics.
+- [x] Confusion matrix.
+- [x] ROC-AUC.
+- [x] Feature importance.
+- [x] Model limitations.
+- [x] Executive interpretation.
 
 ### Deliverable 4: Clinical And Care Coordination Report
 
-- [ ] High-risk patient populations.
-- [ ] Readmission trends.
-- [ ] Diagnosis category analysis.
-- [ ] Chronic disease burden analysis.
-- [ ] Care coordinator effectiveness.
-- [ ] Follow-up completion analysis.
-- [ ] Medication review analysis.
-- [ ] Home health referral analysis.
-- [ ] Transportation assistance analysis.
-- [ ] Intervention recommendations.
+- [x] High-risk patient populations.
+- [x] Readmission trends.
+- [x] Diagnosis category analysis.
+- [x] Chronic disease burden analysis.
+- [x] Care coordinator effectiveness.
+- [x] Follow-up completion analysis.
+- [x] Medication review analysis.
+- [x] Home health referral analysis.
+- [x] Transportation assistance analysis.
+- [x] Intervention recommendations.
 
 ### Deliverable 5: Financial Impact And ROI Report
 
-- [ ] Current financial baseline.
-- [ ] Readmission cost reduction opportunity.
-- [ ] CMS penalty reduction opportunity.
-- [ ] Total care cost opportunity.
-- [ ] Implementation cost assumptions.
-- [ ] Conservative scenario.
-- [ ] Expected scenario.
-- [ ] Optimistic scenario.
-- [ ] ROI and payback period.
+- [x] Current financial baseline.
+- [x] Readmission cost reduction opportunity.
+- [x] CMS penalty reduction opportunity.
+- [x] Total care cost opportunity.
+- [x] Implementation cost assumptions.
+- [x] Conservative scenario.
+- [x] Expected scenario.
+- [x] Optimistic scenario.
+- [x] ROI and payback period.
 
 ### Deliverable 6: Executive Dashboard
 
-- [ ] Executive KPI Summary.
-- [ ] Clinical Analytics.
-- [ ] Financial Analytics.
-- [ ] Care Coordination Analytics.
-- [ ] Executive Recommendation Center.
+- [x] Executive KPI Summary.
+- [x] Clinical Analytics.
+- [x] Financial Analytics.
+- [x] Care Coordination Analytics.
+- [x] Executive Recommendation Center.
 
 ### Deliverable 7: Executive Board Presentation
 
@@ -445,13 +445,13 @@ Status:
 
 ## Immediate Next Analysis Tasks
 
-- [ ] Build EDA summary tables from `data/processed/nhn_patient_level_analysis.csv`.
-- [ ] Create visuals for readmission rate by patient segment.
-- [ ] Create visuals for readmission rate by care coordination intervention.
-- [ ] Create financial baseline summary using nonnegative financial fields.
-- [ ] Define the modeling feature set.
-- [ ] Train baseline logistic regression model.
-- [ ] Train advanced tree-based model.
-- [ ] Select model threshold with recall, precision, and operational capacity in mind.
-- [ ] Build ROI scenarios.
-- [ ] Draft Board presentation storyline from data-backed findings.
+- [x] Build EDA summary tables from `data/processed/nhn_patient_level_analysis.csv`.
+- [x] Create visuals for readmission rate by patient segment.
+- [x] Create visuals for readmission rate by care coordination intervention.
+- [x] Create financial baseline summary using nonnegative financial fields.
+- [x] Define the modeling feature set.
+- [x] Train baseline logistic regression model.
+- [x] Train expanded clinical model.
+- [x] Select staged risk workflow with recall, precision, and operational capacity in mind.
+- [x] Build ROI scenarios.
+- [x] Draft Board presentation storyline from data-backed findings.
