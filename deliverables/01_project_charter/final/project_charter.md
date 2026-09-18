@@ -48,6 +48,22 @@ The consulting team will integrate patient readmission, financial impact, and ca
 - Total care cost in cleaned financial data: $303.13M
 - Nonnegative CMS penalty exposure: $21.25M
 
+## Figures And Supporting Visuals
+
+The following figures are generated from the cleaned project data and are included for report review and presentation reuse.
+
+![Executive KPI baseline for the engagement](../images/executive_kpi_cards.svg)
+
+*Figure: Executive KPI baseline for the engagement*
+
+![Historical readmission trend from the client packet](../images/historical_readmission_trend.svg)
+
+*Figure: Historical readmission trend from the client packet*
+
+![Integrated data flow across the three NHN datasets](../images/data_flow.svg)
+
+*Figure: Integrated data flow across the three NHN datasets*
+
 ## Risks And Mitigations
 
 | Risk | Mitigation |

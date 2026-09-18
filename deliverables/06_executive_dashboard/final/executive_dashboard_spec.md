@@ -64,6 +64,26 @@ Recommended visuals:
 - Implementation roadmap.
 - Success metrics table.
 
+## Figures And Supporting Visuals
+
+The following figures are generated from the cleaned project data and are included for report review and presentation reuse.
+
+![Recommended Tableau dashboard page layout](../images/dashboard_wireframe.svg)
+
+*Figure: Recommended Tableau dashboard page layout*
+
+![Dashboard build package summary preview](../images/dashboard_summary_preview.png)
+
+*Figure: Dashboard build package summary preview*
+
+![Dashboard page specification preview](../images/dashboard_pages_preview.png)
+
+*Figure: Dashboard page specification preview*
+
+![Dashboard validation checks preview](../images/validation_checks_preview.png)
+
+*Figure: Dashboard validation checks preview*
+
 ## Suggested Calculated Measures
 
 | Measure | Definition |

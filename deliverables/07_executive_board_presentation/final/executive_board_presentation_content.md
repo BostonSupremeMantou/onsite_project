@@ -113,6 +113,26 @@ Subtitle: Clinical analytics, financial impact, care coordination, and 12-month 
 - Report evidence checks are summarized in `REPORT_EVIDENCE_AUDIT.md`.
 - The deck should preserve data quality, association, ROI, and model validation caveats in the main narrative.
 
+## Figures And Supporting Visuals
+
+The following figures are generated from the cleaned project data and are included for report review and presentation reuse.
+
+![Full Board presentation contact sheet](../images/board_presentation_contact_sheet.png)
+
+*Figure: Full Board presentation contact sheet*
+
+![Executive Summary slide preview](../images/slide_02_preview.png)
+
+*Figure: Executive Summary slide preview*
+
+![ROI scenario slide preview](../images/slide_12_preview.png)
+
+*Figure: ROI scenario slide preview*
+
+![References and evidence controls slide preview](../images/slide_16_preview.png)
+
+*Figure: References and evidence controls slide preview*
+
 ## Evidence Notes
 
 - Slide-level numbers are calculated from the integrated NHN dataset, section-level output CSVs, and ROI scenario table [INT-3], [INT-4], [INT-5], [INT-6].

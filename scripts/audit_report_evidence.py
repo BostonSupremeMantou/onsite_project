@@ -64,11 +64,18 @@ def report_checks() -> tuple[list[dict[str, object]], list[str]]:
     for path in FINAL_REPORTS:
         text = path.read_text(encoding="utf-8")
         refs = set(re.findall(r"EXT-\d+", text))
+        image_links = re.findall(r"!\[[^\]]*\]\(([^)]+)\)", text)
+        missing_images = [
+            link for link in image_links
+            if not link.startswith(("http://", "https://")) and not (path.parent / link).resolve().exists()
+        ]
         external_refs.update(refs)
         rows.append({
             "Report": path.relative_to(ROOT),
             "Evidence Notes": "Present" if "## Evidence Notes" in text else "Missing",
             "References Used": "Present" if "## References Used" in text else "Missing",
+            "Image Links": len(image_links),
+            "Image Files": "Present" if image_links and not missing_images else "Missing",
             "External References": ", ".join(sorted(refs)) or "None",
         })
     return rows, sorted(external_refs, key=lambda item: int(item.split("-")[1]))

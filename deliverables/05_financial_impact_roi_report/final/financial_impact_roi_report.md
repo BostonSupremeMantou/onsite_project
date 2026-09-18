@@ -28,6 +28,30 @@ NHN's financial opportunity comes from reducing avoidable readmission costs and 
 | Expected | 10.0% | $1.75M | 518 | $10.56M | $8.81M | 5.03 |
 | Optimistic | 15.0% | $2.5M | 778 | $15.86M | $13.36M | 5.34 |
 
+## Figures And Supporting Visuals
+
+The following figures are generated from the cleaned project data and are included for report review and presentation reuse.
+
+![Cleaned financial cost components](../images/financial_cost_components.svg)
+
+*Figure: Cleaned financial cost components*
+
+![Total care cost by readmission outcome](../images/total_cost_by_readmission_outcome.svg)
+
+*Figure: Total care cost by readmission outcome*
+
+![Net reimbursement gap by discharge disposition](../images/net_reimbursement_gap_by_discharge_disposition.svg)
+
+*Figure: Net reimbursement gap by discharge disposition*
+
+![Estimated net savings by ROI scenario](../images/net_savings_scenarios.svg)
+
+*Figure: Estimated net savings by ROI scenario*
+
+![Estimated ROI by scenario](../images/roi_scenarios.svg)
+
+*Figure: Estimated ROI by scenario*
+
 ## Scenario Assumptions
 
 - Conservative: 5.0% readmission reduction and $1.0M implementation cost.

@@ -56,6 +56,30 @@ The clinical analysis identifies higher readmission risk among older patients, p
 | 22-30 days | 3,459 | 43.5% |
 | 8-14 days | 2,844 | 43.0% |
 
+## Figures And Supporting Visuals
+
+The following figures are generated from the cleaned project data and are included for report review and presentation reuse.
+
+![Readmission rate by chronic condition burden](../images/readmission_by_chronic_condition_bucket.svg)
+
+*Figure: Readmission rate by chronic condition burden*
+
+![Readmission rate by prior admission count](../images/readmission_by_prior_admissions.svg)
+
+*Figure: Readmission rate by prior admission count*
+
+![Readmission rate by discharge disposition](../images/readmission_by_discharge_disposition.svg)
+
+*Figure: Readmission rate by discharge disposition*
+
+![Observed intervention association by intervention type](../images/readmission_by_intervention.svg)
+
+*Figure: Observed intervention association by intervention type*
+
+![Readmission rate by follow-up timing bucket](../images/readmission_by_follow_up_timing.svg)
+
+*Figure: Readmission rate by follow-up timing bucket*
+
 ## Interpretation
 
 The most useful care coordination insight is not that one intervention clearly causes lower readmissions. The dataset suggests that NHN should evaluate whether interventions are assigned consistently to the patients with the greatest predicted risk. Several raw intervention groups have similar or higher readmission rates, which likely reflects patient selection and baseline risk.

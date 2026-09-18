@@ -48,14 +48,29 @@ The largest quality issue is missing follow-up status. Financial fields also inc
 | ED visits bucket | 2 | 3,139 | 44.5% | $25.42K |
 | Primary diagnosis | Heart Failure | 2,422 | 44.2% | $25.1K |
 
-## Recommended Visuals
+## Figures And Supporting Visuals
 
-- `sections/02_business_problem/images/historical_readmission_trend.svg`
-- `sections/03_data_overview/images/missing_values_summary.svg`
-- `sections/04_clinical_analysis/images/readmission_by_age_group.svg`
-- `sections/04_clinical_analysis/images/readmission_by_chronic_condition_bucket.svg`
-- `sections/04_clinical_analysis/images/readmission_by_prior_admissions.svg`
-- `sections/04_clinical_analysis/images/readmission_by_discharge_disposition.svg`
+The following figures are generated from the cleaned project data and are included for report review and presentation reuse.
+
+![Data quality issues by source dataset](../images/missing_values_summary.svg)
+
+*Figure: Data quality issues by source dataset*
+
+![Observed readmission rate by age group](../images/readmission_by_age_group.svg)
+
+*Figure: Observed readmission rate by age group*
+
+![Observed readmission rate by chronic condition burden](../images/readmission_by_chronic_condition_bucket.svg)
+
+*Figure: Observed readmission rate by chronic condition burden*
+
+![Observed readmission rate by prior admission count](../images/readmission_by_prior_admissions.svg)
+
+*Figure: Observed readmission rate by prior admission count*
+
+![Observed readmission rate by follow-up documentation status](../images/readmission_by_follow_up_status.svg)
+
+*Figure: Observed readmission rate by follow-up documentation status*
 
 ## Key Findings
 

@@ -92,6 +92,21 @@ def references_section(ids: list[str]) -> str:
     return "\n".join(lines)
 
 
+def figures_section(figures: list[tuple[str, str]]) -> str:
+    lines = [
+        "## Figures And Supporting Visuals",
+        "",
+        "The following figures are generated from the cleaned project data and are included for report review and presentation reuse.",
+        "",
+    ]
+    for path, caption in figures:
+        lines.append(f"![{caption}]({path})")
+        lines.append("")
+        lines.append(f"*Figure: {caption}*")
+        lines.append("")
+    return "\n".join(lines).strip()
+
+
 def load_assets() -> dict[str, pd.DataFrame]:
     return {
         "master": pd.read_csv(ROOT / "data" / "processed" / "nhn_patient_level_analysis.csv"),
@@ -271,6 +286,12 @@ The consulting team will integrate patient readmission, financial impact, and ca
 - Total care cost in cleaned financial data: {money(master['total_care_cost_nonnegative'].sum())}
 - Nonnegative CMS penalty exposure: {money(master['penalty_cost_nonnegative'].sum())}
 
+{figures_section([
+    ('../images/executive_kpi_cards.svg', 'Executive KPI baseline for the engagement'),
+    ('../images/historical_readmission_trend.svg', 'Historical readmission trend from the client packet'),
+    ('../images/data_flow.svg', 'Integrated data flow across the three NHN datasets'),
+])}
+
 ## Risks And Mitigations
 
 | Risk | Mitigation |
@@ -345,14 +366,13 @@ The largest quality issue is missing follow-up status. Financial fields also inc
 
 {table_md(top_by_type, ['segment_type', 'segment', 'patient_count', 'readmission_rate', 'avg_total_care_cost'], {'patient_count': 'int', 'readmission_rate': 'pct', 'avg_total_care_cost': 'money'})}
 
-## Recommended Visuals
-
-- `sections/02_business_problem/images/historical_readmission_trend.svg`
-- `sections/03_data_overview/images/missing_values_summary.svg`
-- `sections/04_clinical_analysis/images/readmission_by_age_group.svg`
-- `sections/04_clinical_analysis/images/readmission_by_chronic_condition_bucket.svg`
-- `sections/04_clinical_analysis/images/readmission_by_prior_admissions.svg`
-- `sections/04_clinical_analysis/images/readmission_by_discharge_disposition.svg`
+{figures_section([
+    ('../images/missing_values_summary.svg', 'Data quality issues by source dataset'),
+    ('../images/readmission_by_age_group.svg', 'Observed readmission rate by age group'),
+    ('../images/readmission_by_chronic_condition_bucket.svg', 'Observed readmission rate by chronic condition burden'),
+    ('../images/readmission_by_prior_admissions.svg', 'Observed readmission rate by prior admission count'),
+    ('../images/readmission_by_follow_up_status.svg', 'Observed readmission rate by follow-up documentation status'),
+])}
 
 ## Key Findings
 
@@ -432,6 +452,13 @@ The expanded clinical logistic model is the current preferred planning model bec
 
 The decile table shows that the model separates lower-risk and higher-risk patients well enough for planning and prioritization.
 
+{figures_section([
+    ('../images/model_metrics_comparison.svg', 'Baseline versus expanded model performance'),
+    ('../images/confusion_matrix_expanded_clinical.svg', 'Expanded clinical model confusion matrix'),
+    ('../images/feature_importance.svg', 'Top drivers in the expanded clinical model'),
+    ('../images/risk_decile_readmission_rate.svg', 'Observed readmission rate by model risk decile'),
+])}
+
 ## Limitations
 
 - This is a preliminary model built from the supplied project dataset.
@@ -482,6 +509,14 @@ The clinical analysis identifies higher readmission risk among older patients, p
 
 {table_md(timing, ['follow_up_timing_bucket', 'patient_count', 'readmission_rate'], {'patient_count': 'int', 'readmission_rate': 'pct'})}
 
+{figures_section([
+    ('../images/readmission_by_chronic_condition_bucket.svg', 'Readmission rate by chronic condition burden'),
+    ('../images/readmission_by_prior_admissions.svg', 'Readmission rate by prior admission count'),
+    ('../images/readmission_by_discharge_disposition.svg', 'Readmission rate by discharge disposition'),
+    ('../images/readmission_by_intervention.svg', 'Observed intervention association by intervention type'),
+    ('../images/readmission_by_follow_up_timing.svg', 'Readmission rate by follow-up timing bucket'),
+])}
+
 ## Interpretation
 
 The most useful care coordination insight is not that one intervention clearly causes lower readmissions. The dataset suggests that NHN should evaluate whether interventions are assigned consistently to the patients with the greatest predicted risk. Several raw intervention groups have similar or higher readmission rates, which likely reflects patient selection and baseline risk.
@@ -531,6 +566,14 @@ NHN's financial opportunity comes from reducing avoidable readmission costs and 
 ## ROI Scenarios
 
 {table_md(roi, ['scenario', 'readmission_reduction_rate', 'implementation_cost_assumption', 'avoided_readmissions', 'gross_savings', 'net_savings', 'roi'], {'readmission_reduction_rate': 'pct', 'implementation_cost_assumption': 'money', 'avoided_readmissions': 'int', 'gross_savings': 'money', 'net_savings': 'money', 'roi': 'score'})}
+
+{figures_section([
+    ('../images/financial_cost_components.svg', 'Cleaned financial cost components'),
+    ('../images/total_cost_by_readmission_outcome.svg', 'Total care cost by readmission outcome'),
+    ('../images/net_reimbursement_gap_by_discharge_disposition.svg', 'Net reimbursement gap by discharge disposition'),
+    ('../images/net_savings_scenarios.svg', 'Estimated net savings by ROI scenario'),
+    ('../images/roi_scenarios.svg', 'Estimated ROI by scenario'),
+])}
 
 ## Scenario Assumptions
 
@@ -627,6 +670,13 @@ Recommended visuals:
 - Recommendation priority matrix.
 - Implementation roadmap.
 - Success metrics table.
+
+{figures_section([
+    ('../images/dashboard_wireframe.svg', 'Recommended Tableau dashboard page layout'),
+    ('../images/dashboard_summary_preview.png', 'Dashboard build package summary preview'),
+    ('../images/dashboard_pages_preview.png', 'Dashboard page specification preview'),
+    ('../images/validation_checks_preview.png', 'Dashboard validation checks preview'),
+])}
 
 ## Suggested Calculated Measures
 
@@ -777,6 +827,13 @@ Subtitle: Clinical analytics, financial impact, care coordination, and 12-month 
 - Evidence rules are maintained in `EVIDENCE_STANDARDS.md`.
 - Report evidence checks are summarized in `REPORT_EVIDENCE_AUDIT.md`.
 - The deck should preserve data quality, association, ROI, and model validation caveats in the main narrative.
+
+{figures_section([
+    ('../images/board_presentation_contact_sheet.png', 'Full Board presentation contact sheet'),
+    ('../images/slide_02_preview.png', 'Executive Summary slide preview'),
+    ('../images/slide_12_preview.png', 'ROI scenario slide preview'),
+    ('../images/slide_16_preview.png', 'References and evidence controls slide preview'),
+])}
 
 ## Evidence Notes
 

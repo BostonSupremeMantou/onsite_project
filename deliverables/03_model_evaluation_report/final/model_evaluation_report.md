@@ -75,6 +75,26 @@ The expanded clinical logistic model is the current preferred planning model bec
 
 The decile table shows that the model separates lower-risk and higher-risk patients well enough for planning and prioritization.
 
+## Figures And Supporting Visuals
+
+The following figures are generated from the cleaned project data and are included for report review and presentation reuse.
+
+![Baseline versus expanded model performance](../images/model_metrics_comparison.svg)
+
+*Figure: Baseline versus expanded model performance*
+
+![Expanded clinical model confusion matrix](../images/confusion_matrix_expanded_clinical.svg)
+
+*Figure: Expanded clinical model confusion matrix*
+
+![Top drivers in the expanded clinical model](../images/feature_importance.svg)
+
+*Figure: Top drivers in the expanded clinical model*
+
+![Observed readmission rate by model risk decile](../images/risk_decile_readmission_rate.svg)
+
+*Figure: Observed readmission rate by model risk decile*
+
 ## Limitations
 
 - This is a preliminary model built from the supplied project dataset.
