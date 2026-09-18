@@ -93,3 +93,21 @@ Recommended visuals:
 - Confirm high-risk filters use risk deciles 8 through 10.
 - Confirm financial charts use nonnegative financial fields.
 - Confirm care coordination pages include the selection-bias caveat in dashboard notes or presentation narration.
+
+## Evidence Notes
+
+- Dashboard data files are derived from the integrated patient-level analysis table and section-level summaries [INT-6].
+- The dashboard is required by the final presentation guide and should be built in Tableau first based on team preference [INT-2].
+- Model and care coordination views should preserve validation and association caveats [EXT-5], [EXT-6], [EXT-7].
+
+## References Used
+
+Full reference governance is maintained in `REFERENCES.md` and `EVIDENCE_STANDARDS.md`.
+
+- [INT-2] Option 1 Final Presentation Requirements.pdf.
+- [INT-6] data/processed/nhn_patient_level_analysis.csv.
+- [EXT-1] Centers for Medicare & Medicaid Services. Hospital Readmissions Reduction Program. https://www.cms.gov/medicare/quality/value-based-programs/hospital-readmissions-reduction-program
+- [EXT-3] Elixhauser A, Steiner C. Readmissions to U.S. Hospitals by Diagnosis, 2010. HCUP Statistical Brief #153. AHRQ, 2013. https://hcup-us.ahrq.gov/reports/statbriefs/sb153.jsp
+- [EXT-5] Coleman EA, Parry C, Chalmers S, Min SJ. The care transitions intervention: results of a randomized controlled trial. Arch Intern Med. 2006;166(17):1822-1828. doi:10.1001/archinte.166.17.1822
+- [EXT-6] Jack BW, Chetty VK, Anthony D, et al. A reengineered hospital discharge program to decrease rehospitalization: a randomized trial. Ann Intern Med. 2009;150(3):178-187. doi:10.7326/0003-4819-150-3-200902030-00007
+- [EXT-7] Collins GS, Reitsma JB, Altman DG, Moons KGM. Transparent Reporting of a multivariable prediction model for Individual Prognosis or Diagnosis (TRIPOD): the TRIPOD statement. Ann Intern Med. 2015;162(1):55-63. doi:10.7326/M14-0697

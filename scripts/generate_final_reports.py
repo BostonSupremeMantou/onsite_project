@@ -18,10 +18,16 @@ def money(value: float, digits: int = 1) -> str:
     value = float(value)
     sign = "-" if value < 0 else ""
     value = abs(value)
+    def compact(amount: float) -> str:
+        text = f"{amount:.2f}"
+        if text.endswith("00"):
+            return f"{amount:.1f}"
+        return text.rstrip("0").rstrip(".")
+
     if value >= 1_000_000:
-        return f"{sign}${value / 1_000_000:.{digits}f}M"
+        return f"{sign}${compact(value / 1_000_000)}M"
     if value >= 1_000:
-        return f"{sign}${value / 1_000:.{digits}f}K"
+        return f"{sign}${compact(value / 1_000)}K"
     return f"{sign}${value:,.0f}"
 
 
@@ -59,6 +65,31 @@ def table_md(df: pd.DataFrame, columns: list[str] | None = None, formats: dict[s
 def write(path: Path, content: str) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(content.strip() + "\n", encoding="utf-8")
+
+
+REFERENCE_DETAILS = {
+    "INT-1": "Option 1 Healthcare Consulting Packet.pdf.",
+    "INT-2": "Option 1 Final Presentation Requirements.pdf.",
+    "INT-3": "NHN Patient Readmission Dataset.csv and data/cleaned/patient_readmission_clean.csv.",
+    "INT-4": "NHN Financial Impact Dataset.csv and data/cleaned/financial_impact_clean.csv.",
+    "INT-5": "NHN Care Coordination Dataset.csv and data/cleaned/care_coordination_clean.csv.",
+    "INT-6": "data/processed/nhn_patient_level_analysis.csv.",
+    "EXT-1": "Centers for Medicare & Medicaid Services. Hospital Readmissions Reduction Program. https://www.cms.gov/medicare/quality/value-based-programs/hospital-readmissions-reduction-program",
+    "EXT-2": "CMS Data. Hospital Readmissions Reduction Program. https://data.cms.gov/provider-data/topics/hospitals/hospital-readmissions-reduction-program",
+    "EXT-3": "Elixhauser A, Steiner C. Readmissions to U.S. Hospitals by Diagnosis, 2010. HCUP Statistical Brief #153. AHRQ, 2013. https://hcup-us.ahrq.gov/reports/statbriefs/sb153.jsp",
+    "EXT-4": "Jencks SF, Williams MV, Coleman EA. Rehospitalizations among patients in the Medicare fee-for-service program. N Engl J Med. 2009;360(14):1418-1428. doi:10.1056/NEJMsa0803563",
+    "EXT-5": "Coleman EA, Parry C, Chalmers S, Min SJ. The care transitions intervention: results of a randomized controlled trial. Arch Intern Med. 2006;166(17):1822-1828. doi:10.1001/archinte.166.17.1822",
+    "EXT-6": "Jack BW, Chetty VK, Anthony D, et al. A reengineered hospital discharge program to decrease rehospitalization: a randomized trial. Ann Intern Med. 2009;150(3):178-187. doi:10.7326/0003-4819-150-3-200902030-00007",
+    "EXT-7": "Collins GS, Reitsma JB, Altman DG, Moons KGM. Transparent Reporting of a multivariable prediction model for Individual Prognosis or Diagnosis (TRIPOD): the TRIPOD statement. Ann Intern Med. 2015;162(1):55-63. doi:10.7326/M14-0697",
+    "EXT-8": "TRIPOD Statement. TRIPOD+AI and TRIPOD 2015 resources. https://www.tripod-statement.org/",
+}
+
+
+def references_section(ids: list[str]) -> str:
+    lines = ["## References Used", "", "Full reference governance is maintained in `REFERENCES.md` and `EVIDENCE_STANDARDS.md`.", ""]
+    for ref_id in ids:
+        lines.append(f"- [{ref_id}] {REFERENCE_DETAILS[ref_id]}")
+    return "\n".join(lines)
 
 
 def load_assets() -> dict[str, pd.DataFrame]:
@@ -260,6 +291,14 @@ The consulting team will integrate patient readmission, financial impact, and ca
 | Financial analyst | Cost baseline, ROI scenarios, financial caveats |
 | Dashboard lead | Tableau or Power BI build, KPI definitions, dashboard QA |
 | Presentation lead | Board deck, speaker notes, final delivery |
+
+## Evidence Notes
+
+- Engagement scope and deliverable requirements come from the client packet and final presentation requirements [INT-1], [INT-2].
+- Current analytical baseline values are calculated from the integrated patient-level analysis table [INT-6].
+- CMS penalty context is included as regulatory framing, not as a substitute for project financial calculations [EXT-1], [EXT-2].
+
+{references_section(['INT-1', 'INT-2', 'INT-6', 'EXT-1', 'EXT-2', 'EXT-3', 'EXT-4'])}
 """
     write(DELIVERABLES / "01_project_charter" / "final" / "project_charter.md", content)
 
@@ -330,6 +369,14 @@ The largest quality issue is missing follow-up status. Financial fields also inc
 - Compare interventions within high-risk deciles to determine whether care coordination reaches the right patients.
 - Validate ROI assumptions with actual implementation costs.
 - Review model threshold selection with clinical operations and care coordination capacity.
+
+## Evidence Notes
+
+- Record counts, readmission rates, data-quality rates, and segment tables are calculated from the cleaned and integrated NHN data [INT-3], [INT-4], [INT-5], [INT-6].
+- The 30-day all-cause framing aligns with AHRQ HCUP readmission definitions and national readmission context [EXT-3].
+- Segment relationships are descriptive. They should guide prioritization, not causal claims [EXT-4].
+
+{references_section(['INT-3', 'INT-4', 'INT-5', 'INT-6', 'EXT-3', 'EXT-4'])}
 """
     write(DELIVERABLES / "02_eda_report" / "final" / "eda_report.md", content)
 
@@ -395,6 +442,14 @@ The decile table shows that the model separates lower-risk and higher-risk patie
 ## Operational Recommendation
 
 Use the model initially for risk stratification, discharge planning prioritization, and dashboard reporting. NHN should pilot the score with care coordination teams before using it for automated decisions.
+
+## Evidence Notes
+
+- Model metrics, confusion matrix counts, feature coefficients, and risk decile validation are generated from the supplied project dataset and section modeling outputs [INT-6].
+- Model results are planning evidence. TRIPOD guidance supports transparent reporting, validation caveats, and careful interpretation before production use [EXT-7], [EXT-8].
+- The selected workflow should combine model score, clinical rules, and care team review instead of using one score as the sole decision engine [EXT-7].
+
+{references_section(['INT-6', 'EXT-7', 'EXT-8'])}
 """
     write(DELIVERABLES / "03_model_evaluation_report" / "final" / "model_evaluation_report.md", content)
 
@@ -442,6 +497,14 @@ The most useful care coordination insight is not that one intervention clearly c
 ## Required Caveat
 
 The current care coordination analysis shows observed association. It does not prove that an intervention caused or prevented readmission.
+
+## Evidence Notes
+
+- Clinical segment rates, intervention comparisons, intervention counts, and follow-up timing rates are calculated from the integrated NHN patient-level analysis and care coordination data [INT-3], [INT-5], [INT-6].
+- Care transition and discharge redesign recommendations are supported by randomized evidence for structured transition support and reengineered discharge workflows [EXT-5], [EXT-6].
+- The current intervention comparisons remain observational. Selection bias is a material limitation, so the report recommends redesigning targeting and timing rather than claiming causal effects.
+
+{references_section(['INT-3', 'INT-5', 'INT-6', 'EXT-5', 'EXT-6', 'EXT-7'])}
 """
     write(DELIVERABLES / "04_clinical_care_coordination_report" / "final" / "clinical_care_coordination_report.md", content)
 
@@ -486,12 +549,20 @@ The expected scenario suggests that reducing avoidable readmissions can create m
 - Scenario implementation costs are placeholders.
 - The model does not yet distinguish avoidable from unavoidable readmissions.
 - ROI should be refreshed after dashboard implementation and operational pilot results.
+
+## Evidence Notes
+
+- Financial baseline, cost components, and ROI scenario values are calculated from the cleaned financial data and integrated patient-level analysis table [INT-4], [INT-6].
+- CMS HRRP references provide policy context for why penalty exposure matters. They do not validate NHN-specific savings estimates [EXT-1], [EXT-2].
+- Readmission-cost framing is supported by peer-reviewed Medicare readmission literature, while ROI remains a project scenario estimate [EXT-4].
+
+{references_section(['INT-4', 'INT-6', 'EXT-1', 'EXT-2', 'EXT-4'])}
 """
     write(DELIVERABLES / "05_financial_impact_roi_report" / "final" / "financial_impact_roi_report.md", content)
 
 
 def generate_dashboard_spec(data: dict[str, pd.DataFrame]) -> None:
-    content = """# Executive Dashboard Specification
+    content = f"""# Executive Dashboard Specification
 
 ## Dashboard Tool
 
@@ -586,6 +657,14 @@ Recommended visuals:
 - Confirm high-risk filters use risk deciles 8 through 10.
 - Confirm financial charts use nonnegative financial fields.
 - Confirm care coordination pages include the selection-bias caveat in dashboard notes or presentation narration.
+
+## Evidence Notes
+
+- Dashboard data files are derived from the integrated patient-level analysis table and section-level summaries [INT-6].
+- The dashboard is required by the final presentation guide and should be built in Tableau first based on team preference [INT-2].
+- Model and care coordination views should preserve validation and association caveats [EXT-5], [EXT-6], [EXT-7].
+
+{references_section(['INT-2', 'INT-6', 'EXT-1', 'EXT-3', 'EXT-5', 'EXT-6', 'EXT-7'])}
 """
     write(DELIVERABLES / "06_executive_dashboard" / "final" / "executive_dashboard_spec.md", content)
 
@@ -692,6 +771,14 @@ Subtitle: Clinical analytics, financial impact, care coordination, and 12-month 
 - Model metric details.
 - ROI assumptions.
 - Care coordination caveat.
+
+## Evidence Notes
+
+- Slide-level numbers are calculated from the integrated NHN dataset, section-level output CSVs, and ROI scenario table [INT-3], [INT-4], [INT-5], [INT-6].
+- The deck structure follows the final presentation requirements and should answer the Board's central question about reducing avoidable readmissions and creating organizational value [INT-2].
+- External references support CMS context, readmission framing, care-transition rationale, discharge redesign rationale, and model-reporting caveats [EXT-1], [EXT-3], [EXT-4], [EXT-5], [EXT-6], [EXT-7].
+
+{references_section(['INT-1', 'INT-2', 'INT-3', 'INT-4', 'INT-5', 'INT-6', 'EXT-1', 'EXT-3', 'EXT-4', 'EXT-5', 'EXT-6', 'EXT-7'])}
 """
     write(DELIVERABLES / "07_executive_board_presentation" / "final" / "executive_board_presentation_content.md", content)
 
@@ -706,8 +793,8 @@ def update_tracker() -> None:
 | 3. Model Evaluation Report | `03_model_evaluation_report` | Model comparison and interpretation report | Final Markdown created |
 | 4. Clinical And Care Coordination Report | `04_clinical_care_coordination_report` | Clinical and intervention analysis report | Final Markdown created |
 | 5. Financial Impact And ROI Report | `05_financial_impact_roi_report` | Financial baseline and ROI scenario report | Final Markdown created |
-| 6. Executive Dashboard | `06_executive_dashboard` | Tableau or Power BI dashboard | Dashboard spec created; native dashboard still needed |
-| 7. Executive Board Presentation | `07_executive_board_presentation` | Final executive presentation | Presentation content created; PPTX still needed |
+| 6. Executive Dashboard | `06_executive_dashboard` | Tableau dashboard | Tableau-first build package and validation workbook created; native Tableau workbook still needed |
+| 7. Executive Board Presentation | `07_executive_board_presentation` | Final executive presentation | Final PPTX and preview images created |
 
 ## Recommended Workflow
 

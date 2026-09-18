@@ -85,3 +85,17 @@ The decile table shows that the model separates lower-risk and higher-risk patie
 ## Operational Recommendation
 
 Use the model initially for risk stratification, discharge planning prioritization, and dashboard reporting. NHN should pilot the score with care coordination teams before using it for automated decisions.
+
+## Evidence Notes
+
+- Model metrics, confusion matrix counts, feature coefficients, and risk decile validation are generated from the supplied project dataset and section modeling outputs [INT-6].
+- Model results are planning evidence. TRIPOD guidance supports transparent reporting, validation caveats, and careful interpretation before production use [EXT-7], [EXT-8].
+- The selected workflow should combine model score, clinical rules, and care team review instead of using one score as the sole decision engine [EXT-7].
+
+## References Used
+
+Full reference governance is maintained in `REFERENCES.md` and `EVIDENCE_STANDARDS.md`.
+
+- [INT-6] data/processed/nhn_patient_level_analysis.csv.
+- [EXT-7] Collins GS, Reitsma JB, Altman DG, Moons KGM. Transparent Reporting of a multivariable prediction model for Individual Prognosis or Diagnosis (TRIPOD): the TRIPOD statement. Ann Intern Med. 2015;162(1):55-63. doi:10.7326/M14-0697
+- [EXT-8] TRIPOD Statement. TRIPOD+AI and TRIPOD 2015 resources. https://www.tripod-statement.org/

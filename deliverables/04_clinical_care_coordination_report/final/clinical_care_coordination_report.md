@@ -8,21 +8,21 @@ The clinical analysis identifies higher readmission risk among older patients, p
 
 | segment_type | segment | patient_count | readmission_rate | avg_total_care_cost |
 | --- | --- | --- | --- | --- |
-| Chronic condition bucket | 5+ | 1,317 | 62.3% | $25.3K |
-| Follow-up status | Unknown | 2,587 | 60.3% | $25.3K |
-| Prior admissions bucket | 3+ | 3,225 | 57.0% | $25.2K |
-| Discharge disposition | Skilled Nursing | 1,803 | 54.4% | $25.0K |
-| Age group | 85+ | 949 | 54.3% | $25.4K |
-| Age group | 75-84 | 1,491 | 51.1% | $25.3K |
-| Admission type | Emergency | 7,095 | 50.9% | $25.3K |
-| Chronic condition bucket | 3-4 | 4,181 | 49.6% | $25.2K |
-| Age group | 65-74 | 2,393 | 48.0% | $25.3K |
+| Chronic condition bucket | 5+ | 1,317 | 62.3% | $25.26K |
+| Follow-up status | Unknown | 2,587 | 60.3% | $25.29K |
+| Prior admissions bucket | 3+ | 3,225 | 57.0% | $25.22K |
+| Discharge disposition | Skilled Nursing | 1,803 | 54.4% | $25.03K |
+| Age group | 85+ | 949 | 54.3% | $25.37K |
+| Age group | 75-84 | 1,491 | 51.1% | $25.25K |
+| Admission type | Emergency | 7,095 | 50.9% | $25.28K |
+| Chronic condition bucket | 3-4 | 4,181 | 49.6% | $25.18K |
+| Age group | 65-74 | 2,393 | 48.0% | $25.28K |
 | Prior admissions bucket | 2 | 3,206 | 46.2% | $25.1K |
-| Age group | 50-64 | 4,065 | 42.0% | $25.2K |
-| Discharge disposition | Rehab | 1,247 | 41.3% | $25.4K |
-| Discharge disposition | Home | 7,404 | 41.2% | $25.2K |
-| Discharge disposition | Home Health | 1,546 | 41.1% | $25.5K |
-| Follow-up status | Scheduled | 4,120 | 39.8% | $25.3K |
+| Age group | 50-64 | 4,065 | 42.0% | $25.17K |
+| Discharge disposition | Rehab | 1,247 | 41.3% | $25.43K |
+| Discharge disposition | Home | 7,404 | 41.2% | $25.25K |
+| Discharge disposition | Home Health | 1,546 | 41.1% | $25.45K |
+| Follow-up status | Scheduled | 4,120 | 39.8% | $25.25K |
 
 ## Care Coordination Intervention Summary
 
@@ -71,3 +71,20 @@ The most useful care coordination insight is not that one intervention clearly c
 ## Required Caveat
 
 The current care coordination analysis shows observed association. It does not prove that an intervention caused or prevented readmission.
+
+## Evidence Notes
+
+- Clinical segment rates, intervention comparisons, intervention counts, and follow-up timing rates are calculated from the integrated NHN patient-level analysis and care coordination data [INT-3], [INT-5], [INT-6].
+- Care transition and discharge redesign recommendations are supported by randomized evidence for structured transition support and reengineered discharge workflows [EXT-5], [EXT-6].
+- The current intervention comparisons remain observational. Selection bias is a material limitation, so the report recommends redesigning targeting and timing rather than claiming causal effects.
+
+## References Used
+
+Full reference governance is maintained in `REFERENCES.md` and `EVIDENCE_STANDARDS.md`.
+
+- [INT-3] NHN Patient Readmission Dataset.csv and data/cleaned/patient_readmission_clean.csv.
+- [INT-5] NHN Care Coordination Dataset.csv and data/cleaned/care_coordination_clean.csv.
+- [INT-6] data/processed/nhn_patient_level_analysis.csv.
+- [EXT-5] Coleman EA, Parry C, Chalmers S, Min SJ. The care transitions intervention: results of a randomized controlled trial. Arch Intern Med. 2006;166(17):1822-1828. doi:10.1001/archinte.166.17.1822
+- [EXT-6] Jack BW, Chetty VK, Anthony D, et al. A reengineered hospital discharge program to decrease rehospitalization: a randomized trial. Ann Intern Med. 2009;150(3):178-187. doi:10.7326/0003-4819-150-3-200902030-00007
+- [EXT-7] Collins GS, Reitsma JB, Altman DG, Moons KGM. Transparent Reporting of a multivariable prediction model for Individual Prognosis or Diagnosis (TRIPOD): the TRIPOD statement. Ann Intern Med. 2015;162(1):55-63. doi:10.7326/M14-0697

@@ -6,7 +6,7 @@ Prepare the content, visuals, and talking points needed for the `01_executive_su
 
 ## Key Message
 
-NHN has a 43.2% readmission rate in the analytical sample, and the expected ROI scenario estimates $8.8M in net savings before cost validation.
+NHN has a 43.2% readmission rate in the analytical sample, and the expected ROI scenario estimates $8.81M in net savings before cost validation.
 
 ## Recommended Visuals
 

@@ -45,8 +45,8 @@ The consulting team will integrate patient readmission, financial impact, and ca
 
 - Matched patient records: 12,000
 - Analytical sample readmission rate: 43.2%
-- Total care cost in cleaned financial data: $303.1M
-- Nonnegative CMS penalty exposure: $21.2M
+- Total care cost in cleaned financial data: $303.13M
+- Nonnegative CMS penalty exposure: $21.25M
 
 ## Risks And Mitigations
 
@@ -68,3 +68,21 @@ The consulting team will integrate patient readmission, financial impact, and ca
 | Financial analyst | Cost baseline, ROI scenarios, financial caveats |
 | Dashboard lead | Tableau or Power BI build, KPI definitions, dashboard QA |
 | Presentation lead | Board deck, speaker notes, final delivery |
+
+## Evidence Notes
+
+- Engagement scope and deliverable requirements come from the client packet and final presentation requirements [INT-1], [INT-2].
+- Current analytical baseline values are calculated from the integrated patient-level analysis table [INT-6].
+- CMS penalty context is included as regulatory framing, not as a substitute for project financial calculations [EXT-1], [EXT-2].
+
+## References Used
+
+Full reference governance is maintained in `REFERENCES.md` and `EVIDENCE_STANDARDS.md`.
+
+- [INT-1] Option 1 Healthcare Consulting Packet.pdf.
+- [INT-2] Option 1 Final Presentation Requirements.pdf.
+- [INT-6] data/processed/nhn_patient_level_analysis.csv.
+- [EXT-1] Centers for Medicare & Medicaid Services. Hospital Readmissions Reduction Program. https://www.cms.gov/medicare/quality/value-based-programs/hospital-readmissions-reduction-program
+- [EXT-2] CMS Data. Hospital Readmissions Reduction Program. https://data.cms.gov/provider-data/topics/hospitals/hospital-readmissions-reduction-program
+- [EXT-3] Elixhauser A, Steiner C. Readmissions to U.S. Hospitals by Diagnosis, 2010. HCUP Statistical Brief #153. AHRQ, 2013. https://hcup-us.ahrq.gov/reports/statbriefs/sb153.jsp
+- [EXT-4] Jencks SF, Williams MV, Coleman EA. Rehospitalizations among patients in the Medicare fee-for-service program. N Engl J Med. 2009;360(14):1418-1428. doi:10.1056/NEJMsa0803563

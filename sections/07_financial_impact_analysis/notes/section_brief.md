@@ -6,7 +6,7 @@ Prepare the content, visuals, and talking points needed for the `07_financial_im
 
 ## Key Message
 
-The cleaned financial dataset shows $303.1M in total care cost and $21.2M in nonnegative CMS penalty exposure.
+The cleaned financial dataset shows $303.13M in total care cost and $21.25M in nonnegative CMS penalty exposure.
 
 ## Recommended Visuals
 

@@ -6,7 +6,7 @@ Prepare the content, visuals, and talking points needed for the `10_financial_im
 
 ## Key Message
 
-The expected scenario assumes a 10.0% readmission reduction, 518 avoided readmissions, and $8.8M in estimated net savings.
+The expected scenario assumes a 10.0% readmission reduction, 518 avoided readmissions, and $8.81M in estimated net savings.
 
 ## Recommended Visuals
 

@@ -39,13 +39,13 @@ The largest quality issue is missing follow-up status. Financial fields also inc
 
 | segment_type | segment | patient_count | readmission_rate | avg_total_care_cost |
 | --- | --- | --- | --- | --- |
-| Chronic condition bucket | 5+ | 1,317 | 62.3% | $25.3K |
-| Follow-up status | Unknown | 2,587 | 60.3% | $25.3K |
-| Prior admissions bucket | 3+ | 3,225 | 57.0% | $25.2K |
-| Discharge disposition | Skilled Nursing | 1,803 | 54.4% | $25.0K |
-| Age group | 85+ | 949 | 54.3% | $25.4K |
-| Admission type | Emergency | 7,095 | 50.9% | $25.3K |
-| ED visits bucket | 2 | 3,139 | 44.5% | $25.4K |
+| Chronic condition bucket | 5+ | 1,317 | 62.3% | $25.26K |
+| Follow-up status | Unknown | 2,587 | 60.3% | $25.29K |
+| Prior admissions bucket | 3+ | 3,225 | 57.0% | $25.22K |
+| Discharge disposition | Skilled Nursing | 1,803 | 54.4% | $25.03K |
+| Age group | 85+ | 949 | 54.3% | $25.37K |
+| Admission type | Emergency | 7,095 | 50.9% | $25.28K |
+| ED visits bucket | 2 | 3,139 | 44.5% | $25.42K |
 | Primary diagnosis | Heart Failure | 2,422 | 44.2% | $25.1K |
 
 ## Recommended Visuals
@@ -72,3 +72,20 @@ The largest quality issue is missing follow-up status. Financial fields also inc
 - Compare interventions within high-risk deciles to determine whether care coordination reaches the right patients.
 - Validate ROI assumptions with actual implementation costs.
 - Review model threshold selection with clinical operations and care coordination capacity.
+
+## Evidence Notes
+
+- Record counts, readmission rates, data-quality rates, and segment tables are calculated from the cleaned and integrated NHN data [INT-3], [INT-4], [INT-5], [INT-6].
+- The 30-day all-cause framing aligns with AHRQ HCUP readmission definitions and national readmission context [EXT-3].
+- Segment relationships are descriptive. They should guide prioritization, not causal claims [EXT-4].
+
+## References Used
+
+Full reference governance is maintained in `REFERENCES.md` and `EVIDENCE_STANDARDS.md`.
+
+- [INT-3] NHN Patient Readmission Dataset.csv and data/cleaned/patient_readmission_clean.csv.
+- [INT-4] NHN Financial Impact Dataset.csv and data/cleaned/financial_impact_clean.csv.
+- [INT-5] NHN Care Coordination Dataset.csv and data/cleaned/care_coordination_clean.csv.
+- [INT-6] data/processed/nhn_patient_level_analysis.csv.
+- [EXT-3] Elixhauser A, Steiner C. Readmissions to U.S. Hospitals by Diagnosis, 2010. HCUP Statistical Brief #153. AHRQ, 2013. https://hcup-us.ahrq.gov/reports/statbriefs/sb153.jsp
+- [EXT-4] Jencks SF, Williams MV, Coleman EA. Rehospitalizations among patients in the Medicare fee-for-service program. N Engl J Med. 2009;360(14):1418-1428. doi:10.1056/NEJMsa0803563
