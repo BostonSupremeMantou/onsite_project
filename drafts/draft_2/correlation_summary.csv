@@ -1,0 +1,9 @@
+field,correlation
+prior_admissions_12m,0.21955225537899734
+chronic_conditions,0.21280988251869637
+length_of_stay_days_imputed,0.15146776261086492
+age,0.14217610258006044
+intervention_count,0.0235237772137791
+post_discharge_calls_imputed,0.021583749841200324
+care_coordinator_assigned,0.012859966025769538
+ed_visits_12m,0.01229660434884991

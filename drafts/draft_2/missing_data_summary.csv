@@ -1,0 +1,7 @@
+issue,dataset,rows,rate
+Missing follow-up status,Patient,2587,0.2155833333333333
+Missing insurance type,Patient,240,0.02
+Missing length of stay,Patient,240,0.02
+Missing penalty cost,Financial,240,0.02
+Missing follow-up program cost,Financial,240,0.02
+Missing follow-up days,Care Coordination,180,0.015

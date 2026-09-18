@@ -1,0 +1,6 @@
+field,count,rate,lower_bound,upper_bound,max
+length_of_stay_days,191,0.016241496598639455,-0.5,11.5,16.0
+total_care_cost,72,0.006,9306.587500000001,41216.6475,47600.22
+net_reimbursement_gap,64,0.0053351117039013,-7969.645,30690.855,37897.66
+follow_up_days_after_discharge,0,0.0,-14.5,45.5,30.0
+post_discharge_calls,0,0.0,-3.5,8.5,5.0

@@ -1,0 +1,187 @@
+{
+  "row_count": 12000,
+  "dataset_count": 3,
+  "unique_patient_ids": 12000,
+  "readmission_rate": 0.432,
+  "quality_issue_rows": 3620,
+  "quality_issue_rate": 0.3016666666666667,
+  "missing_summary": [
+    {
+      "issue": "Missing follow-up status",
+      "dataset": "Patient",
+      "rows": 2587,
+      "rate": 0.2155833333333333
+    },
+    {
+      "issue": "Missing insurance type",
+      "dataset": "Patient",
+      "rows": 240,
+      "rate": 0.02
+    },
+    {
+      "issue": "Missing length of stay",
+      "dataset": "Patient",
+      "rows": 240,
+      "rate": 0.02
+    },
+    {
+      "issue": "Missing penalty cost",
+      "dataset": "Financial",
+      "rows": 240,
+      "rate": 0.02
+    },
+    {
+      "issue": "Missing follow-up program cost",
+      "dataset": "Financial",
+      "rows": 240,
+      "rate": 0.02
+    },
+    {
+      "issue": "Missing follow-up days",
+      "dataset": "Care Coordination",
+      "rows": 180,
+      "rate": 0.015
+    }
+  ],
+  "negative_summary": [
+    {
+      "issue": "Negative penalty cost",
+      "dataset": "Financial",
+      "rows": 49,
+      "rate": 0.0040833333333333
+    },
+    {
+      "issue": "Negative follow-up program cost",
+      "dataset": "Financial",
+      "rows": 15,
+      "rate": 0.00125
+    },
+    {
+      "issue": "Negative readmission cost",
+      "dataset": "Financial",
+      "rows": 4,
+      "rate": 0.0003333333333333
+    },
+    {
+      "issue": "Negative reimbursement amount",
+      "dataset": "Financial",
+      "rows": 4,
+      "rate": 0.0003333333333333
+    }
+  ],
+  "outlier_summary": [
+    {
+      "field": "length_of_stay_days",
+      "count": 191,
+      "rate": 0.016241496598639455,
+      "lower_bound": -0.5,
+      "upper_bound": 11.5,
+      "max": 16.0
+    },
+    {
+      "field": "total_care_cost",
+      "count": 72,
+      "rate": 0.006,
+      "lower_bound": 9306.587500000001,
+      "upper_bound": 41216.6475,
+      "max": 47600.22
+    },
+    {
+      "field": "net_reimbursement_gap",
+      "count": 64,
+      "rate": 0.0053351117039013,
+      "lower_bound": -7969.645,
+      "upper_bound": 30690.855,
+      "max": 37897.66
+    },
+    {
+      "field": "follow_up_days_after_discharge",
+      "count": 0,
+      "rate": 0.0,
+      "lower_bound": -14.5,
+      "upper_bound": 45.5,
+      "max": 30.0
+    },
+    {
+      "field": "post_discharge_calls",
+      "count": 0,
+      "rate": 0.0,
+      "lower_bound": -3.5,
+      "upper_bound": 8.5,
+      "max": 5.0
+    }
+  ],
+  "age_trend": [
+    {
+      "segment": "50-64",
+      "patients": 4065,
+      "readmission_rate": 0.42017220172201725
+    },
+    {
+      "segment": "65-74",
+      "patients": 2393,
+      "readmission_rate": 0.47973255328040115
+    },
+    {
+      "segment": "75-84",
+      "patients": 1491,
+      "readmission_rate": 0.5110663983903421
+    },
+    {
+      "segment": "85+",
+      "patients": 949,
+      "readmission_rate": 0.5426765015806112
+    }
+  ],
+  "follow_up_trend": [
+    {
+      "segment": "Unknown",
+      "patients": 2587,
+      "readmission_rate": 0.6030150753768844
+    },
+    {
+      "segment": "Scheduled",
+      "patients": 4120,
+      "readmission_rate": 0.3975728155339806
+    },
+    {
+      "segment": "Completed",
+      "patients": 5293,
+      "readmission_rate": 0.3752125448705838
+    }
+  ],
+  "correlation_summary": [
+    {
+      "field": "prior_admissions_12m",
+      "correlation": 0.21955225537899734
+    },
+    {
+      "field": "chronic_conditions",
+      "correlation": 0.21280988251869637
+    },
+    {
+      "field": "length_of_stay_days_imputed",
+      "correlation": 0.15146776261086492
+    },
+    {
+      "field": "age",
+      "correlation": 0.14217610258006044
+    },
+    {
+      "field": "intervention_count",
+      "correlation": 0.0235237772137791
+    },
+    {
+      "field": "post_discharge_calls_imputed",
+      "correlation": 0.021583749841200324
+    },
+    {
+      "field": "care_coordinator_assigned",
+      "correlation": 0.012859966025769538
+    },
+    {
+      "field": "ed_visits_12m",
+      "correlation": 0.01229660434884991
+    }
+  ]
+}
