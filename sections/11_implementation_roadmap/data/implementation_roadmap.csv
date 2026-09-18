@@ -3,6 +3,6 @@ phase,initiative,owner,success_measure
 0-3 months,Pilot pre-discharge risk scoring for emergency admissions and skilled nursing discharges.,Clinical operations and analytics,Risk scores available before discharge
 0-3 months,Fix follow-up status documentation workflow and missing-value monitoring.,Care coordination leadership,Reduced unknown follow-up status
 3-6 months,Expand targeted care coordination for high-risk chronic disease and prior-admission groups.,Care coordination leadership,Higher intervention completion in high-risk groups
-3-6 months,Build Tableau or Power BI dashboard using the prepared dashboard extract.,BI team,Published executive dashboard
+3-6 months,Build Tableau dashboard using the prepared dashboard extract.,BI team,Published executive dashboard
 6-12 months,"Track ROI, readmission reduction, CMS penalty exposure, and intervention performance monthly.",Finance and quality leadership,Monthly executive review cadence
 6-12 months,Refresh and validate the risk model with new outcomes and operational feedback.,Analytics and clinical governance,Updated model performance and threshold review

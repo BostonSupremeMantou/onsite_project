@@ -311,7 +311,7 @@ def simple_flow_diagram(path: Path) -> None:
 def dashboard_wireframe(path: Path) -> None:
     width, height = 1300, 780
     parts = svg_header(width, height)
-    add_title(parts, "Executive Dashboard Wireframe", "Recommended Tableau or Power BI page layout.")
+    add_title(parts, "Executive Dashboard Wireframe", "Recommended Tableau page layout.")
     panels = [
         (50, 120, 250, 110, "KPI Summary", "Readmission rate, high-risk count, total cost, penalties, ROI"),
         (325, 120, 420, 260, "Clinical Analytics", "Risk profiles, diagnosis, chronic burden, readmission patterns"),
@@ -1075,7 +1075,7 @@ def generate_assets() -> None:
             {"phase": "0-3 months", "initiative": "Pilot pre-discharge risk scoring for emergency admissions and skilled nursing discharges.", "owner": "Clinical operations and analytics", "success_measure": "Risk scores available before discharge"},
             {"phase": "0-3 months", "initiative": "Fix follow-up status documentation workflow and missing-value monitoring.", "owner": "Care coordination leadership", "success_measure": "Reduced unknown follow-up status"},
             {"phase": "3-6 months", "initiative": "Expand targeted care coordination for high-risk chronic disease and prior-admission groups.", "owner": "Care coordination leadership", "success_measure": "Higher intervention completion in high-risk groups"},
-            {"phase": "3-6 months", "initiative": "Build Tableau or Power BI dashboard using the prepared dashboard extract.", "owner": "BI team", "success_measure": "Published executive dashboard"},
+            {"phase": "3-6 months", "initiative": "Build Tableau dashboard using the prepared dashboard extract.", "owner": "BI team", "success_measure": "Published executive dashboard"},
             {"phase": "6-12 months", "initiative": "Track ROI, readmission reduction, CMS penalty exposure, and intervention performance monthly.", "owner": "Finance and quality leadership", "success_measure": "Monthly executive review cadence"},
             {"phase": "6-12 months", "initiative": "Refresh and validate the risk model with new outcomes and operational feedback.", "owner": "Analytics and clinical governance", "success_measure": "Updated model performance and threshold review"},
         ]
@@ -1246,11 +1246,11 @@ The financial data supports a Board-level story about the cost burden of readmis
 
 Start with the readmission rate and high-risk population. Move into clinical drivers, then financial exposure, then care coordination performance. End with the recommendation center and implementation priorities.
 """,
-        SECTION_DIRS["08"] / "notes" / "tableau_powerbi_build_guide.md": """# Tableau Or Power BI Build Guide
+        SECTION_DIRS["08"] / "notes" / "tableau_powerbi_build_guide.md": """# Tableau Dashboard Build Guide
 
 ## Requirement
 
-The project requires an executive dashboard using Tableau or Power BI. This repository now includes dashboard-ready CSV files, but it does not contain a native Tableau workbook (`.twb` or `.twbx`) or Power BI report (`.pbix`).
+The project requires an executive dashboard using Tableau. This repository now includes dashboard-ready CSV files, but it does not contain a native Tableau workbook (`.twb` or `.twbx`).
 
 ## Recommended Data Files
 
@@ -1329,7 +1329,7 @@ Recommended visuals:
 
 ## Practical Recommendation
 
-Use Tableau or Power BI for the final submitted dashboard. Use the SVG visuals in each section folder as backup presentation assets or as quick slide visuals if the live dashboard is not ready.
+Use Tableau for the final submitted dashboard. Use the SVG visuals in each section folder as backup presentation assets or as quick slide visuals if the live dashboard is not ready.
 """,
         SECTION_DIRS["09"] / "notes" / "strategic_recommendations.md": """# Strategic Recommendations
 
@@ -1405,8 +1405,8 @@ Generated section-level data analysis, visualization, and presentation assets fo
 - Section-level CSV summary tables in each `sections/*/data/` folder.
 - PPT-ready SVG visuals in each `sections/*/images/` folder.
 - Section finding notes and presentation talking points in each `sections/*/notes/` folder.
-- Tableau or Power BI dashboard-ready files in `sections/08_executive_dashboard_walkthrough/data/`.
-- Tableau or Power BI build guidance in `sections/08_executive_dashboard_walkthrough/notes/tableau_powerbi_build_guide.md`.
+- Tableau dashboard-ready files in `sections/08_executive_dashboard_walkthrough/data/`.
+- Tableau build guidance in `sections/08_executive_dashboard_walkthrough/notes/tableau_powerbi_build_guide.md`.
 
 ## Current Analytical Baseline
 
@@ -1415,9 +1415,9 @@ Generated section-level data analysis, visualization, and presentation assets fo
 - Expanded clinical model ROC-AUC: {model_row['roc_auc']:.2f}
 - Expected scenario net savings: {fmt_money(expected['net_savings'])}
 
-## Tableau Or Power BI Status
+## Tableau Dashboard Status
 
-The project requires a Tableau or Power BI dashboard. Native Tableau or Power BI files were not generated in this repository, but the required dashboard-ready CSVs, KPI definitions, recommended pages, measures, and visual layout are prepared in section 08.
+The project requires a Tableau dashboard. A native Tableau workbook was not generated in this repository, but the required dashboard-ready CSVs, KPI definitions, recommended pages, measures, and visual layout are prepared in section 08.
 
 ## Important Caveats
 

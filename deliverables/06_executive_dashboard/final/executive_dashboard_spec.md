@@ -2,7 +2,7 @@
 
 ## Dashboard Tool
 
-Use Tableau or Power BI for the required executive dashboard. This repository includes the dashboard-ready data, KPI definitions, and page specifications needed to build the native dashboard file.
+Use Tableau first for the required executive dashboard. This repository includes the dashboard-ready data, KPI definitions, and page specifications needed to build the native Tableau dashboard file.
 
 ## Required Data Files
 

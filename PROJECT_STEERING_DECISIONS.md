@@ -2,7 +2,7 @@
 
 ## Dashboard And Presentation Direction
 
-- Use Tableau as the primary dashboard tool. Power BI remains a backup implementation path.
+- Use Tableau as the dashboard tool for the final executive dashboard.
 - Design the dashboard for presentation and executive review rather than daily operational use.
 - Keep the Meds Consulting light executive template consistent across presentation assets.
 

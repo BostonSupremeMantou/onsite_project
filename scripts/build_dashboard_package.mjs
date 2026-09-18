@@ -221,7 +221,7 @@ for (const sheet of [summary, pages, defs, build, validation, data, recommendati
 }
 
 // Dashboard Summary
-writeTitle(summary, "NHN Executive Dashboard Build Package", "Use this workbook with the CSV extracts to build a Tableau-first presentation dashboard. Power BI definitions are included as backup.");
+writeTitle(summary, "NHN Executive Dashboard Build Package", "Use this workbook with the CSV extracts to build a Tableau presentation dashboard.");
 summary.getRange("B7:E7").values = [["Readmission Rate", "High-Risk Patients", "Total Care Cost", "Expected ROI"]];
 summary.getRange("B8:E8").formulas = [[
   "=SUM('Data Extract'!M7:M12006)/COUNTA('Data Extract'!B7:B12006)",
@@ -248,7 +248,7 @@ styleChart(roiChart, "Net savings by ROI scenario ($M)", "$0.0");
 summary.freezePanes.freezeRows(6);
 
 // Dashboard Pages
-writeTitle(pages, "Dashboard Page Specification", "Build these five native dashboard pages in Tableau first for presentation use. Keep Power BI as a backup implementation path.");
+writeTitle(pages, "Dashboard Page Specification", "Build these five native dashboard pages in Tableau for presentation use.");
 writeTable(pages, "B6:E11", [
   ["Page", "Purpose", "Primary Visuals", "Recommended Filters"],
   ["Executive KPI Summary", "Presentation-level status", "KPI cards, risk decile chart, recommendation table", "Diagnosis, risk decile, readmission outcome"],
@@ -259,7 +259,7 @@ writeTable(pages, "B6:E11", [
 ], "DashboardPages", [24, 24, 40, 34]);
 
 // Measure Definitions
-writeTitle(defs, "Calculated Measures And Field Map", "Use these definitions when building Tableau calculated fields. Power BI DAX equivalents can use the same measure logic.");
+writeTitle(defs, "Calculated Measures And Field Map", "Use these definitions when building Tableau calculated fields.");
 writeTable(defs, "B6:D12", [
   ["Measure", "Definition", "Recommended Visual"],
   ...measures.map((row) => [row.measure, row.definition, row.recommended_visual]),
@@ -329,7 +329,7 @@ writeTable(build, "G20:K26", [
 ], "InterventionSummary", [30, 18, 20, 14, 18]);
 build.getRange("J21:K26").setNumberFormat("0.0%");
 // Validation Checks
-writeTitle(validation, "Dashboard Validation Checks", "Use these checks after importing data into Tableau or Power BI.");
+writeTitle(validation, "Dashboard Validation Checks", "Use these checks after importing data into Tableau.");
 writeTable(validation, "B6:F13", [
   ["Check", "Expected", "Workbook Formula", "Actual", "Status"],
   ["Record count", 12000, "COUNT patient_id", null, null],
@@ -364,7 +364,7 @@ validation.getRange("E8:E8").setNumberFormat("0.0%");
 validation.getRange("C11:E12").setNumberFormat("$#,##0");
 
 // Data Extract
-writeTitle(data, "Dashboard Ready Extract", "One row per patient. Use this sheet or the source CSV as the Tableau or Power BI import table.");
+writeTitle(data, "Dashboard Ready Extract", "One row per patient. Use this sheet or the source CSV as the Tableau import table.");
 const headers = Object.keys(extract[0]);
 data.getRange("B6").write([headers, ...extract.map(coerceExtractRow)]);
 const dataRange = data.getRange("B6").resize(extract.length + 1, headers.length);

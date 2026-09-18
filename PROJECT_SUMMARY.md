@@ -240,7 +240,7 @@ Should estimate:
 
 ### Deliverable 6: Executive Dashboard
 
-The dashboard should be built in Tableau or Power BI and should support executive decision-making.
+The dashboard should be built in Tableau and should support executive decision-making.
 
 Required sections:
 

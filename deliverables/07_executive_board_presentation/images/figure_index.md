@@ -21,3 +21,4 @@ This file lists the supporting assets placed in this deliverable folder and wher
 | images/slide_13_preview.png | Slide 13 preview. | deliverables/07_executive_board_presentation/final/preview/slide-13.png |
 | images/slide_14_preview.png | Slide 14 preview. | deliverables/07_executive_board_presentation/final/preview/slide-14.png |
 | images/slide_15_preview.png | Slide 15 preview. | deliverables/07_executive_board_presentation/final/preview/slide-15.png |
+| images/slide_16_preview.png | Slide 16 preview. | deliverables/07_executive_board_presentation/final/preview/slide-16.png |

@@ -56,7 +56,7 @@ The consulting team will integrate patient readmission, financial impact, and ca
 | Financial fields include missing or negative values | Use nonnegative companion fields and sensitivity analysis |
 | Intervention comparisons may reflect patient selection | Present care coordination findings as observed associations, not causal effects |
 | Model may not be ready for clinical production | Use it as a planning baseline and require validation before deployment |
-| Tableau or Power BI build depends on local software access | Provide dashboard-ready CSVs, KPI definitions, and build guide |
+| Native Tableau build depends on local software access | Provide dashboard-ready CSVs, KPI definitions, and build guide |
 
 ## Team Roles
 
@@ -66,7 +66,7 @@ The consulting team will integrate patient readmission, financial impact, and ca
 | Data analyst | Data cleaning, EDA, summary tables, visual assets |
 | Modeling lead | Feature set, model comparison, risk score interpretation |
 | Financial analyst | Cost baseline, ROI scenarios, financial caveats |
-| Dashboard lead | Tableau or Power BI build, KPI definitions, dashboard QA |
+| Dashboard lead | Tableau build, KPI definitions, dashboard QA |
 | Presentation lead | Board deck, speaker notes, final delivery |
 
 ## Evidence Notes

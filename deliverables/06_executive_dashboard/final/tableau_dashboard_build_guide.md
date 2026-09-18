@@ -2,7 +2,7 @@
 
 ## Recommended Tool
 
-Use Tableau as the primary dashboard tool. Power BI can use the same data model and measures as a backup implementation path.
+Use Tableau as the dashboard tool for the final executive dashboard. The prepared data model and measure definitions are written for Tableau implementation.
 
 ## Primary Data Source
 

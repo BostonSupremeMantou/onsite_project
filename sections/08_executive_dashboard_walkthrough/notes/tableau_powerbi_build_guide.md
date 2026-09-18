@@ -1,8 +1,8 @@
-# Tableau Or Power BI Build Guide
+# Tableau Dashboard Build Guide
 
 ## Requirement
 
-The project requires an executive dashboard using Tableau or Power BI. This repository now includes dashboard-ready CSV files, but it does not contain a native Tableau workbook (`.twb` or `.twbx`) or Power BI report (`.pbix`).
+The project requires an executive dashboard using Tableau. This repository now includes dashboard-ready CSV files, but it does not contain a native Tableau workbook (`.twb` or `.twbx`).
 
 ## Recommended Data Files
 
@@ -81,4 +81,4 @@ Recommended visuals:
 
 ## Practical Recommendation
 
-Use Tableau or Power BI for the final submitted dashboard. Use the SVG visuals in each section folder as backup presentation assets or as quick slide visuals if the live dashboard is not ready.
+Use Tableau for the final submitted dashboard. Use the SVG visuals in each section folder as backup presentation assets or as quick slide visuals if the live dashboard is not ready.

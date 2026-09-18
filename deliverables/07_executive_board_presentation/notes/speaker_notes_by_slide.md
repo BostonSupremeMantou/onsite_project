@@ -44,3 +44,6 @@ Define how success will be measured after launch.
 
 ## Slide 15
 Close with decision points that support broad coverage, staged governance, Tableau dashboard development, documentation improvement, and ROI validation.
+
+## Slide 16
+Use this appendix slide when the audience asks where metrics and external evidence came from. Point to `REFERENCES.md`, `EVIDENCE_STANDARDS.md`, and `REPORT_EVIDENCE_AUDIT.md`.

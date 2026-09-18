@@ -11,8 +11,8 @@ Generated section-level data analysis, visualization, and presentation assets fo
 - Section-level CSV summary tables in each `sections/*/data/` folder.
 - PPT-ready SVG visuals in each `sections/*/images/` folder.
 - Section finding notes and presentation talking points in each `sections/*/notes/` folder.
-- Tableau or Power BI dashboard-ready files in `sections/08_executive_dashboard_walkthrough/data/`.
-- Tableau or Power BI build guidance in `sections/08_executive_dashboard_walkthrough/notes/tableau_powerbi_build_guide.md`.
+- Tableau dashboard-ready files in `sections/08_executive_dashboard_walkthrough/data/`.
+- Tableau build guidance in `sections/08_executive_dashboard_walkthrough/notes/tableau_powerbi_build_guide.md`.
 
 ## Current Analytical Baseline
 
@@ -21,9 +21,9 @@ Generated section-level data analysis, visualization, and presentation assets fo
 - Expanded clinical model ROC-AUC: 0.74
 - Expected scenario net savings: $8.8M
 
-## Tableau Or Power BI Status
+## Tableau Dashboard Status
 
-The project requires a Tableau or Power BI dashboard. Native Tableau or Power BI files were not generated in this repository, but the required dashboard-ready CSVs, KPI definitions, recommended pages, measures, and visual layout are prepared in section 08.
+The project requires a Tableau dashboard. A native Tableau workbook was not generated in this repository, but the required dashboard-ready CSVs, KPI definitions, recommended pages, measures, and visual layout are prepared in section 08.
 
 ## Important Caveats
 

@@ -2,7 +2,7 @@
 
 ## Purpose
 
-Prepare the Tableau or Power BI dashboard materials and walkthrough narrative for executive decision-making.
+Prepare the Tableau dashboard materials and walkthrough narrative for executive decision-making.
 
 ## Content To Prepare
 

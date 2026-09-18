@@ -279,7 +279,7 @@ The consulting team will integrate patient readmission, financial impact, and ca
 | Financial fields include missing or negative values | Use nonnegative companion fields and sensitivity analysis |
 | Intervention comparisons may reflect patient selection | Present care coordination findings as observed associations, not causal effects |
 | Model may not be ready for clinical production | Use it as a planning baseline and require validation before deployment |
-| Tableau or Power BI build depends on local software access | Provide dashboard-ready CSVs, KPI definitions, and build guide |
+| Native Tableau build depends on local software access | Provide dashboard-ready CSVs, KPI definitions, and build guide |
 
 ## Team Roles
 
@@ -289,7 +289,7 @@ The consulting team will integrate patient readmission, financial impact, and ca
 | Data analyst | Data cleaning, EDA, summary tables, visual assets |
 | Modeling lead | Feature set, model comparison, risk score interpretation |
 | Financial analyst | Cost baseline, ROI scenarios, financial caveats |
-| Dashboard lead | Tableau or Power BI build, KPI definitions, dashboard QA |
+| Dashboard lead | Tableau build, KPI definitions, dashboard QA |
 | Presentation lead | Board deck, speaker notes, final delivery |
 
 ## Evidence Notes
@@ -566,7 +566,7 @@ def generate_dashboard_spec(data: dict[str, pd.DataFrame]) -> None:
 
 ## Dashboard Tool
 
-Use Tableau or Power BI for the required executive dashboard. This repository includes the dashboard-ready data, KPI definitions, and page specifications needed to build the native dashboard file.
+Use Tableau first for the required executive dashboard. This repository includes the dashboard-ready data, KPI definitions, and page specifications needed to build the native Tableau dashboard file.
 
 ## Required Data Files
 
@@ -715,19 +715,25 @@ Subtitle: Clinical analytics, financial impact, care coordination, and 12-month 
 - The expanded model performs better and remains explainable for leadership.
 - Largest drivers include emergency admission, skilled nursing discharge, prior admissions, chronic conditions, length of stay, and age.
 
-## Slide 7: Care Coordination Analysis
+## Slide 7: Risk Stratification
+
+- Risk deciles turn model output into an operational queue.
+- Deciles 8-10 should form the broad high-risk group.
+- Clinical rules should add repeat admissions, high chronic burden, emergency admission, and skilled nursing discharge.
+
+## Slide 8: Care Coordination Analysis
 
 - Intervention comparisons show observed association, not causal impact.
 - High-risk patients may receive more support, which can make raw intervention rates difficult to interpret.
 - NHN should evaluate whether interventions reach the highest-risk patients early enough.
 
-## Slide 8: Financial Impact Analysis
+## Slide 9: Financial Impact Analysis
 
 - Total care cost in the cleaned dataset is {money(master['total_care_cost_nonnegative'].sum())}.
 - Nonnegative CMS penalty exposure is {money(master['penalty_cost_nonnegative'].sum())}.
 - Financial estimates should use quality flags and scenario sensitivity.
 
-## Slide 9: Dashboard Walkthrough
+## Slide 10: Dashboard Walkthrough
 
 - Executive KPI Summary.
 - Clinical Analytics.
@@ -735,21 +741,21 @@ Subtitle: Clinical analytics, financial impact, care coordination, and 12-month 
 - Care Coordination Analytics.
 - Executive Recommendation Center.
 
-## Slide 10: Strategic Recommendations
+## Slide 11: Strategic Recommendations
 
 {chr(10).join(f"- {row.recommendation}: {row.evidence}" for row in recommendations.itertuples())}
 
-## Slide 11: Financial Impact And ROI
+## Slide 12: Financial Impact And ROI
 
 | Scenario | Readmission Reduction | Avoided Readmissions | Net Savings | ROI |
 | --- | --- | --- | --- | --- |
 {chr(10).join(f"| {row.scenario} | {pct(row.readmission_reduction_rate)} | {integer(row.avoided_readmissions)} | {money(row.net_savings)} | {row.roi:.2f}x |" for row in data['roi'].itertuples())}
 
-## Slide 12: Implementation Roadmap
+## Slide 13: Implementation Roadmap
 
 {chr(10).join(f"- {row.phase}: {row.initiative}" for row in roadmap.itertuples())}
 
-## Slide 13: Success Measures
+## Slide 14: Success Measures
 
 - Readmission rate.
 - High-risk patient intervention completion.
@@ -758,27 +764,27 @@ Subtitle: Clinical analytics, financial impact, care coordination, and 12-month 
 - Unknown follow-up status rate.
 - Model ROC-AUC and recall.
 
-## Slide 14: Board Decision Points
+## Slide 15: Board Decision Points
 
 - Approve a pilot for pre-discharge risk scoring.
-- Approve dashboard development in Tableau or Power BI.
+- Approve dashboard development in Tableau.
 - Approve follow-up documentation improvements.
 - Validate implementation cost assumptions for ROI tracking.
 
-## Slide 15: Appendix
+## Slide 16: References And Evidence Controls
 
-- Data quality limitations.
-- Model metric details.
-- ROI assumptions.
-- Care coordination caveat.
+- Full citations are maintained in `REFERENCES.md`.
+- Evidence rules are maintained in `EVIDENCE_STANDARDS.md`.
+- Report evidence checks are summarized in `REPORT_EVIDENCE_AUDIT.md`.
+- The deck should preserve data quality, association, ROI, and model validation caveats in the main narrative.
 
 ## Evidence Notes
 
 - Slide-level numbers are calculated from the integrated NHN dataset, section-level output CSVs, and ROI scenario table [INT-3], [INT-4], [INT-5], [INT-6].
 - The deck structure follows the final presentation requirements and should answer the Board's central question about reducing avoidable readmissions and creating organizational value [INT-2].
-- External references support CMS context, readmission framing, care-transition rationale, discharge redesign rationale, and model-reporting caveats [EXT-1], [EXT-3], [EXT-4], [EXT-5], [EXT-6], [EXT-7].
+- External references support CMS context, readmission framing, care-transition rationale, discharge redesign rationale, and model-reporting caveats [EXT-1], [EXT-2], [EXT-3], [EXT-4], [EXT-5], [EXT-6], [EXT-7], [EXT-8].
 
-{references_section(['INT-1', 'INT-2', 'INT-3', 'INT-4', 'INT-5', 'INT-6', 'EXT-1', 'EXT-3', 'EXT-4', 'EXT-5', 'EXT-6', 'EXT-7'])}
+{references_section(['INT-1', 'INT-2', 'INT-3', 'INT-4', 'INT-5', 'INT-6', 'EXT-1', 'EXT-2', 'EXT-3', 'EXT-4', 'EXT-5', 'EXT-6', 'EXT-7', 'EXT-8'])}
 """
     write(DELIVERABLES / "07_executive_board_presentation" / "final" / "executive_board_presentation_content.md", content)
 
@@ -799,7 +805,7 @@ def update_tracker() -> None:
 ## Recommended Workflow
 
 1. Review each final Markdown file for instructor or team preferences.
-2. Build the native Tableau or Power BI dashboard from the dashboard-ready data.
+2. Build the native Tableau dashboard from the dashboard-ready data.
 3. Convert the Board presentation content into the final deck.
 4. Put submission-ready files in each `final/` folder.
 """

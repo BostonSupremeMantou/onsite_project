@@ -2,7 +2,7 @@
 
 ## Tool Direction
 
-Use Tableau first. Power BI remains a backup path.
+Use Tableau as the dashboard build tool.
 
 ## Audience
 

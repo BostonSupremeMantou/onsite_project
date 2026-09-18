@@ -2,7 +2,7 @@
 
 ## Tool
 
-- Tableau or Power BI:
+- Tableau:
 
 ## Data Source
 

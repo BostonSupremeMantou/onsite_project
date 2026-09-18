@@ -13,10 +13,10 @@
 - [x] Preliminary predictive models completed and compared.
 - [x] Preliminary care coordination effectiveness analysis assets generated.
 - [x] Preliminary financial impact and ROI scenario assets generated.
-- [x] Tableau or Power BI dashboard-ready data and build guide created.
+- [x] Tableau dashboard-ready data and build guide created.
 - [x] Tableau-first dashboard build package workbook created.
 - [x] Deliverable workspace folders and templates created.
-- [ ] Native Tableau or Power BI dashboard completed.
+- [ ] Native Tableau dashboard completed.
 - [x] Final Board presentation completed.
 
 ## Data Cleaning Checklist
@@ -274,9 +274,9 @@ Status:
 - [x] Dashboard-ready extract created.
 - [x] Dashboard KPI definitions created.
 - [x] Dashboard wireframe created.
-- [x] Tableau or Power BI build guide created.
+- [x] Tableau build guide created.
 - [x] Tableau-first dashboard build package workbook created.
-- [ ] Native Tableau or Power BI build needed.
+- [ ] Native Tableau build needed.
 - [ ] Dashboard screenshots needed after native dashboard build.
 - [x] Dashboard walkthrough script drafted.
 

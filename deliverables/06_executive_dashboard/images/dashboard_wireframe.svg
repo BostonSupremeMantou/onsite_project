@@ -9,7 +9,7 @@
 .kpi{font-family:Arial,Helvetica,sans-serif;font-size:34px;font-weight:700;fill:#0f172a}
 </style>
 <text x="48" y="52" class="title">Executive Dashboard Wireframe</text>
-<text x="48" y="82" class="subtitle">Recommended Tableau or Power BI page layout.</text>
+<text x="48" y="82" class="subtitle">Recommended Tableau page layout.</text>
 <rect x="50" y="120" width="250" height="110" rx="10" fill="#dbeafe" stroke="#94a3b8" stroke-width="1.5"/>
 <text x="72" y="160" class="value">KPI Summary</text>
 <text x="72" y="195" class="small">Readmission rate, high-risk count, total</text>

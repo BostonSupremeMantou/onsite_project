@@ -465,7 +465,7 @@ def populate_dashboard() -> None:
 
 ## Tool Direction
 
-Use Tableau first. Power BI remains a backup path.
+Use Tableau as the dashboard build tool.
 
 ## Audience
 
@@ -522,7 +522,7 @@ def populate_presentation() -> None:
         ("deliverables/07_executive_board_presentation/images/healthcare_analytics_background.png", "Cover backup image.", "healthcare_analytics_background.png"),
         ("deliverables/07_executive_board_presentation/final/preview_overview/contact_sheet.png", "Full deck visual QA contact sheet.", "board_presentation_contact_sheet.png"),
     ]
-    for idx in range(1, 16):
+    for idx in range(1, 17):
         image_items.append((
             f"deliverables/07_executive_board_presentation/final/preview/slide-{idx}.png",
             f"Slide {idx} preview.",
@@ -545,6 +545,7 @@ def populate_presentation() -> None:
         {"Slide": 13, "Topic": "Implementation", "Primary Evidence": "12-month roadmap", "Source File": "data/implementation_roadmap.csv"},
         {"Slide": 14, "Topic": "Governance", "Primary Evidence": "Success metrics", "Source File": "data/success_metrics.csv"},
         {"Slide": 15, "Topic": "Decision Points", "Primary Evidence": "Steering decisions and recommendations", "Source File": "PROJECT_STEERING_DECISIONS.md"},
+        {"Slide": 16, "Topic": "References And Evidence Controls", "Primary Evidence": "Reference governance and evidence audit", "Source File": "REFERENCES.md"},
     ])
     write_text(deliverable / "notes" / "speaker_notes_by_slide.md", """# Speaker Notes By Slide
 
@@ -592,6 +593,9 @@ Define how success will be measured after launch.
 
 ## Slide 15
 Close with decision points that support broad coverage, staged governance, Tableau dashboard development, documentation improvement, and ROI validation.
+
+## Slide 16
+Use this appendix slide when the audience asks where metrics and external evidence came from. Point to `REFERENCES.md`, `EVIDENCE_STANDARDS.md`, and `REPORT_EVIDENCE_AUDIT.md`.
 """)
     write_review_notes(deliverable, "Executive Board Presentation", [
         "Use `final/nhn_readmission_board_presentation.pptx` as the final deck.",
@@ -614,6 +618,7 @@ Close with decision points that support broad coverage, staged governance, Table
         "Recommendations",
         "Roadmap And Governance",
         "Decision Points",
+        "References And Evidence Controls",
     ])
 
 

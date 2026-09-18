@@ -12,7 +12,7 @@ This audit checks whether the final written deliverables are tied to project dat
 | deliverables/04_clinical_care_coordination_report/final/clinical_care_coordination_report.md | Present | Present | EXT-5, EXT-6, EXT-7 |
 | deliverables/05_financial_impact_roi_report/final/financial_impact_roi_report.md | Present | Present | EXT-1, EXT-2, EXT-4 |
 | deliverables/06_executive_dashboard/final/executive_dashboard_spec.md | Present | Present | EXT-1, EXT-3, EXT-5, EXT-6, EXT-7 |
-| deliverables/07_executive_board_presentation/final/executive_board_presentation_content.md | Present | Present | EXT-1, EXT-3, EXT-4, EXT-5, EXT-6, EXT-7 |
+| deliverables/07_executive_board_presentation/final/executive_board_presentation_content.md | Present | Present | EXT-1, EXT-2, EXT-3, EXT-4, EXT-5, EXT-6, EXT-7, EXT-8 |
 
 ## External Reference Coverage
 

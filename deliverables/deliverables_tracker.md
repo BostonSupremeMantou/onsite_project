@@ -13,6 +13,6 @@
 ## Recommended Workflow
 
 1. Review each final Markdown file for instructor or team preferences.
-2. Build the native Tableau or Power BI dashboard from the dashboard-ready data.
+2. Build the native Tableau dashboard from the dashboard-ready data.
 3. Convert the Board presentation content into the final deck.
 4. Put submission-ready files in each `final/` folder.

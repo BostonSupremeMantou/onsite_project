@@ -42,6 +42,13 @@ const PREVIEW_DIR = path.join(
   "final",
   "preview",
 );
+const PREVIEW_OVERVIEW_DIR = path.join(
+  ROOT,
+  "deliverables",
+  "07_executive_board_presentation",
+  "final",
+  "preview_overview",
+);
 const BACKGROUND_IMAGE = path.join(
   ROOT,
   "deliverables",
@@ -67,6 +74,7 @@ const C = {
   white: "#FFFFFF",
 };
 const BRAND = "Meds Consulting LLC";
+const deckSlides = [];
 
 function parseCsv(text) {
   const rows = [];
@@ -116,9 +124,20 @@ async function csv(relPath) {
 const num = (value) => Number(value);
 const chartValue = (value) => Number(num(value).toFixed(4));
 const pct = (value, digits = 1) => `${(num(value) * 100).toFixed(digits)}%`;
-const moneyM = (value, digits = 1) => `$${(num(value) / 1_000_000).toFixed(digits)}M`;
 const int = (value) => Math.round(num(value)).toLocaleString("en-US");
 const pp = (value) => `${(num(value) * 100).toFixed(1)} pp`;
+
+function compactAmount(value, digits = 2) {
+  const text = Number(value).toFixed(digits);
+  if (text.endsWith("00")) return Number(value).toFixed(1);
+  return text.replace(/0+$/, "").replace(/\.$/, "");
+}
+
+const moneyM = (value, digits = 2) => `$${compactAmount(num(value) / 1_000_000, digits)}M`;
+
+function note(body, ...refs) {
+  return `${body}\n\nReferences: ${refs.join(", ")}. Full citations are maintained in REFERENCES.md.`;
+}
 
 function titleCaseFeature(value) {
   return value
@@ -160,6 +179,7 @@ function addShape(slide, position, fill = C.lightSlate, line = { style: "solid",
 
 function addSlide(title, kicker) {
   const slide = presentation.slides.add();
+  deckSlides.push(slide);
   slide.background.fill = C.page;
   slide.shapes.add({
     geometry: "rect",
@@ -283,7 +303,7 @@ function addBarChart(slide, position, categories, values, options = {}) {
       line: { style: "solid", fill: "#CBD5E1", width: 1 },
     },
     dataLabels: {
-      showValue: true,
+      showValue: options.showDataLabels ?? true,
       position: options.labelPosition ?? "outEnd",
       textStyle: { typeface: family, fontSize: 9, fill: C.ink },
     },
@@ -419,6 +439,7 @@ const presentation = Presentation.create({
 // 1. Title
 {
   const slide = presentation.slides.add();
+  deckSlides.push(slide);
   slide.background.fill = C.page;
   slide.shapes.add({
     geometry: "rect",
@@ -482,17 +503,17 @@ const presentation = Presentation.create({
   });
   addMetric(slide, "Analytical patients", "12,000", { left: 64, top: 428, width: 210, height: 110 }, C.teal, "Matched across 3 datasets");
   addMetric(slide, "Readmission rate", "43.2%", { left: 320, top: 428, width: 210, height: 110 }, C.amber, "Current analytical sample");
-  addMetric(slide, "Expected net savings", "$8.8M", { left: 684, top: 428, width: 210, height: 110 }, C.green, "Before cost validation");
+  addMetric(slide, "Expected net savings", moneyM(expectedRoi.net_savings), { left: 684, top: 428, width: 210, height: 110 }, C.green, "Before cost validation");
   addMetric(slide, "Model ROC-AUC", "0.74", { left: 940, top: 428, width: 210, height: 110 }, C.blue, "Expanded clinical model");
   addFooter(slide);
-  setNotes(slide, "Open with the core ask: reduce avoidable readmissions while protecting quality, capacity, and financial performance.");
+  setNotes(slide, note("Open with the core ask: reduce avoidable readmissions while protecting quality, capacity, and financial performance. The opening metrics come from the integrated NHN analysis and ROI scenario table.", "INT-1", "INT-2", "INT-6", "EXT-1"));
 }
 
 // 2. Executive summary
 {
   const slide = addSlide("Executive Summary", "Decision context");
   addMetric(slide, "Readmission Rate", kpiMap.get("Analytical dataset readmission rate").display_value, { left: 64, top: 188, width: 250, height: 126 }, C.amber, "5,184 readmitted patients");
-  addMetric(slide, "Model ROC-AUC", pct(expandedModel.roc_auc), { left: 340, top: 188, width: 250, height: 126 }, C.blue, "Expanded clinical model");
+  addMetric(slide, "Model ROC-AUC", num(expandedModel.roc_auc).toFixed(2), { left: 340, top: 188, width: 250, height: 126 }, C.blue, "Expanded clinical model");
   addMetric(slide, "Penalty Exposure", kpiMap.get("CMS penalty exposure in cleaned dataset").display_value, { left: 616, top: 188, width: 250, height: 126 }, C.red, "Nonnegative exposure");
   addMetric(slide, "Expected ROI", `${num(expectedRoi.roi).toFixed(2)}x`, { left: 892, top: 188, width: 250, height: 126 }, C.green, `${moneyM(expectedRoi.net_savings)} net savings`);
   addBullets(slide, [
@@ -500,7 +521,7 @@ const presentation = Presentation.create({
     "Cover deciles 8-10 and other high-risk clinical groups rather than narrowing the pilot to one minimum segment.",
     "Build the executive dashboard in Tableau first using the prepared extract, KPI definitions, and validation checks.",
   ], 82, 372, 1000, { gap: 58, fontSize: 20, markerColor: C.teal });
-  setNotes(slide, "The summary combines clinical, financial, and operating findings into the Board-level decision path.");
+  setNotes(slide, note("The summary combines clinical, financial, and operating findings into the Board-level decision path. Present the model as a staged risk input and keep the expected ROI as a planning scenario.", "INT-6", "EXT-1", "EXT-7"));
 }
 
 // 3. Business problem
@@ -518,7 +539,7 @@ const presentation = Presentation.create({
     "Leadership estimates more than $42M in annual readmission-related cost.",
     "The challenge affects patient outcomes, inpatient capacity, staff workload, and CMS penalty exposure.",
   ], 704, 196, 450, { gap: 86, fontSize: 20, markerColor: C.red });
-  setNotes(slide, "Use this slide to frame why the work matters before moving into the integrated data and analysis.");
+  setNotes(slide, note("Use this slide to frame why the work matters before moving into the integrated data and analysis. The business problem should cover clinical quality, capacity, care workload, and financial exposure.", "INT-1", "EXT-1", "EXT-3", "EXT-4"));
 }
 
 // 4. Data overview
@@ -552,7 +573,7 @@ const presentation = Presentation.create({
     width: 1030,
     height: 42,
   }, { fontSize: 20, bold: true, color: C.teal, alignment: "center" });
-  setNotes(slide, "Call out that the data joins cleanly, while follow-up documentation and financial field quality remain limitations.");
+  setNotes(slide, note("Call out that the data joins cleanly, while follow-up documentation and financial field quality remain limitations. These caveats should stay visible in the main deck.", "INT-3", "INT-4", "INT-5", "INT-6"));
 }
 
 // 5. Clinical analysis
@@ -570,7 +591,7 @@ const presentation = Presentation.create({
     "Skilled nursing discharge and higher chronic-condition burden signal elevated risk.",
     "Prior admissions remain one of the strongest clinical predictors.",
   ], 790, 192, 360, { gap: 90, fontSize: 20, markerColor: C.teal });
-  setNotes(slide, "Tie the high-risk segments back to operational decisions such as discharge review and care coordination assignment.");
+  setNotes(slide, note("Tie the high-risk segments back to operational decisions such as discharge review and care coordination assignment. Treat segment findings as observed risk patterns from the analysis table.", "INT-3", "INT-6", "EXT-3"));
 }
 
 // 6. Predictive modeling results
@@ -620,7 +641,7 @@ const presentation = Presentation.create({
     width: 420,
     height: 44,
   }, { fontSize: 17, bold: true, color: C.teal, alignment: "center" });
-  setNotes(slide, "The model is not positioned as a single decision engine. Use staged risk scoring, clinical rules, and operational review to balance recall and precision.");
+  setNotes(slide, note("The model is not positioned as a single decision engine. Use staged risk scoring, clinical rules, and operational review to balance recall and precision.", "INT-6", "EXT-7", "EXT-8"));
 }
 
 // 7. Risk stratification
@@ -650,7 +671,7 @@ const presentation = Presentation.create({
     bold: true,
     color: C.blue,
   });
-  setNotes(slide, "Risk deciles turn the model into an operational queue, but coverage should be broad and supported by clinical rules rather than a narrow decile-10-only pilot.");
+  setNotes(slide, note("Risk deciles turn the model into an operational queue, but coverage should be broad and supported by clinical rules rather than a narrow decile-10-only pilot.", "INT-6", "EXT-7"));
 }
 
 // 8. Care coordination
@@ -679,7 +700,7 @@ const presentation = Presentation.create({
     "Selection bias strengthens the case for better targeting and earlier intervention timing.",
     "Priority should be broad high-risk coverage, completion tracking, and redesign of intervention assignment rules.",
   ], 790, 180, 360, { gap: 94, fontSize: 19, markerColor: C.amber });
-  setNotes(slide, "Keep the causal caveat visible, then make the stronger operational point: NHN should redesign targeting, timing, and intervention completion for high-risk patients.");
+  setNotes(slide, note("Keep the causal caveat visible, then make the stronger operational point: NHN should redesign targeting, timing, and intervention completion for high-risk patients.", "INT-5", "INT-6", "EXT-5", "EXT-6"));
 }
 
 // 9. Financial impact
@@ -713,7 +734,7 @@ const presentation = Presentation.create({
     width: 410,
     height: 86,
   }, { fontSize: 19, color: C.ink });
-  setNotes(slide, "The analysis gives a strong directional financial case while preserving data quality caveats.");
+  setNotes(slide, note("The analysis gives a strong directional financial case while preserving data quality caveats. Use nonnegative financial fields and scenario sensitivity when presenting ROI.", "INT-4", "INT-6", "EXT-1", "EXT-4"));
 }
 
 // 10. Dashboard walkthrough
@@ -731,7 +752,7 @@ const presentation = Presentation.create({
     { mode: "fr", value: 1.4 },
     { mode: "fr", value: 2.1 },
   ]);
-  addMetric(slide, "Required tool", "Tableau first", { left: 920, top: 192, width: 250, height: 128 }, C.blue, "Power BI backup path");
+  addMetric(slide, "Required tool", "Tableau", { left: 920, top: 192, width: 250, height: 128 }, C.blue, "Primary dashboard path");
   addMetric(slide, "Dashboard rows", "12,000", { left: 920, top: 346, width: 250, height: 128 }, C.teal, "One row per patient");
   addText(slide, "Use dashboard_ready_extract.csv plus the Tableau build package and validation checks in deliverable 06.", {
     left: 920,
@@ -739,7 +760,7 @@ const presentation = Presentation.create({
     width: 250,
     height: 74,
   }, { fontSize: 17, color: C.ink });
-  setNotes(slide, "This is the handoff from analytics to a native Tableau or Power BI dashboard build.");
+  setNotes(slide, note("This is the handoff from analytics to a Tableau executive dashboard build for presentation and executive review.", "INT-2", "INT-6", "EXT-1"));
 }
 
 // 11. Strategic recommendations
@@ -759,18 +780,18 @@ const presentation = Presentation.create({
     width: 960,
     height: 42,
   }, { fontSize: 22, bold: true, color: C.teal, alignment: "center" });
-  setNotes(slide, "The table is structured for Board discussion. It keeps recommendations traceable to evidence and timing.");
+  setNotes(slide, note("The table is structured for Board discussion. It keeps recommendations traceable to evidence and timing, with no single recommendation treated as the only strategy.", "INT-6", "EXT-5", "EXT-6", "EXT-7"));
 }
 
 // 12. ROI scenarios
 {
-  const slide = addSlide("Expected Scenario Produces $8.8M Net Savings", "ROI");
+  const slide = addSlide(`Expected Scenario Produces ${moneyM(expectedRoi.net_savings)} Net Savings`, "ROI");
   addBarChart(
     slide,
     { left: 72, top: 166, width: 560, height: 350 },
     roi.map((row) => row.scenario),
     roi.map((row) => num(row.net_savings) / 1_000_000),
-    { title: "Estimated net savings by scenario", fill: C.green, numberFormatCode: "$0.0M", max: 15 },
+    { title: "Estimated net savings by scenario ($M)", fill: C.green, numberFormatCode: "$0.00M", max: 15, showDataLabels: false },
   );
   addNativeTable(slide, [
     ["Scenario", "Reduction", "Avoided readmissions", "Net savings", "ROI"],
@@ -794,7 +815,7 @@ const presentation = Presentation.create({
     width: 456,
     height: 70,
   }, { fontSize: 20, color: C.ink });
-  setNotes(slide, "The ROI slide should be presented as a planning scenario, not a guaranteed budget result.");
+  setNotes(slide, note("The ROI slide should be presented as a planning scenario, not a guaranteed budget result. Retain the current implementation cost assumptions and ask Finance to validate them before budget commitment.", "INT-4", "INT-6", "EXT-1", "EXT-4"));
 }
 
 // 13. Implementation roadmap
@@ -808,7 +829,7 @@ const presentation = Presentation.create({
     { mode: "fr", value: 2.7 },
     { mode: "fr", value: 1.6 },
   ]);
-  setNotes(slide, "Walk through the roadmap as a staged implementation, starting with governance, pilot design, and data quality.");
+  setNotes(slide, note("Walk through the roadmap as a staged implementation, starting with governance, pilot design, and data quality. The first native dashboard build path is Tableau.", "INT-2", "INT-6"));
 }
 
 // 14. Success measures
@@ -828,7 +849,7 @@ const presentation = Presentation.create({
     "Quarterly model refresh review with clinical governance.",
     "Dashboard data quality checks before every executive reporting cycle.",
   ], 880, 182, 300, { gap: 96, fontSize: 18, markerColor: C.blue });
-  setNotes(slide, "Define how the organization will know whether the program is working after launch.");
+  setNotes(slide, note("Define how the organization will know whether the program is working after launch. Include model monitoring so clinical governance can track drift, recall, and precision over time.", "INT-6", "EXT-7"));
 }
 
 // 15. Board decision points
@@ -848,13 +869,38 @@ const presentation = Presentation.create({
     width: 920,
     height: 34,
   }, { fontSize: 22, bold: true, color: "#166534", alignment: "center" });
-  setNotes(slide, "Close by asking for concrete approvals tied to a controlled pilot and transparent measurement cadence.");
+  setNotes(slide, note("Close by asking for concrete approvals tied to a controlled pilot and transparent measurement cadence. Reinforce the data caveats before presenting the funding decision.", "INT-2", "EXT-1", "EXT-7"));
+}
+
+// 16. References and evidence controls
+{
+  const slide = addSlide("References And Evidence Controls", "Evidence");
+  addNativeTable(slide, [
+    ["Evidence area", "References used"],
+    ["Project packet and NHN data", "INT-1 through INT-6"],
+    ["CMS and payment context", "EXT-1 and EXT-2"],
+    ["Readmission baseline context", "EXT-3 and EXT-4"],
+    ["Care transition evidence", "EXT-5 and EXT-6"],
+    ["Model reporting standards", "EXT-7 and EXT-8"],
+    ["Repository controls", "REFERENCES.md, EVIDENCE_STANDARDS.md, REPORT_EVIDENCE_AUDIT.md"],
+  ], { left: 72, top: 180, width: 1040, height: 334 }, [
+    { mode: "fr", value: 1.4 },
+    { mode: "fr", value: 2.6 },
+  ]);
+  addShape(slide, { left: 126, top: 552, width: 928, height: 56 }, "#EFF6FF", { style: "solid", fill: "#BFDBFE", width: 1 });
+  addText(slide, "Evidence audit passed: 8 external references used and core metrics reconciled to source files.", {
+    left: 158,
+    top: 568,
+    width: 864,
+    height: 30,
+  }, { fontSize: 20, bold: true, color: C.navy, alignment: "center" });
+  setNotes(slide, note("Use this appendix slide when asked where the numbers and outside evidence came from. Full citations and internal source definitions are in REFERENCES.md.", "INT-1", "INT-2", "INT-3", "INT-4", "INT-5", "INT-6", "EXT-1", "EXT-2", "EXT-3", "EXT-4", "EXT-5", "EXT-6", "EXT-7", "EXT-8"));
 }
 
 const requirements = {
-  explicitTotalSlideCount: 15,
+  explicitTotalSlideCount: 16,
   requiredNativeChartOwnerSlides: [3, 5, 6, 7, 8, 9, 12],
-  requiredNativeTableOwnerSlides: [4, 6, 9, 10, 11, 12, 13, 14],
+  requiredNativeTableOwnerSlides: [4, 6, 9, 10, 11, 12, 13, 14, 16],
   materializeLiteralChartWorkbooks: true,
   nativeChartTargetApplication: "portable",
 };
@@ -867,6 +913,22 @@ await (await PresentationFile.exportPptx(presentation)).save(candidatePath);
 const montage = await presentation.export({ format: "webp", montage: true, scale: 1 });
 await fs.writeFile(path.join(TMP_DIR, "candidate_montage.webp"), Buffer.from(await montage.arrayBuffer()));
 
+await fs.rm(PREVIEW_DIR, { recursive: true, force: true });
+await fs.rm(PREVIEW_OVERVIEW_DIR, { recursive: true, force: true });
+await fs.mkdir(PREVIEW_DIR, { recursive: true });
+await fs.mkdir(PREVIEW_OVERVIEW_DIR, { recursive: true });
+for (const [index, slide] of deckSlides.entries()) {
+  const preview = await presentation.export({ slide, format: "png", scale: 1 });
+  await fs.writeFile(
+    path.join(PREVIEW_DIR, `slide-${index + 1}.png`),
+    Buffer.from(await preview.arrayBuffer()),
+  );
+}
+const contactSheet = await presentation.export({ format: "png", montage: true, scale: 0.5 });
+const contactBuffer = Buffer.from(await contactSheet.arrayBuffer());
+await fs.writeFile(path.join(PREVIEW_DIR, "contact_sheet.png"), contactBuffer);
+await fs.writeFile(path.join(PREVIEW_OVERVIEW_DIR, "contact_sheet.png"), contactBuffer);
+
 const result = await finalizePresentation({
   ...requirements,
   workspaceDir: ROOT,
@@ -877,7 +939,7 @@ const result = await finalizePresentation({
   layoutValidatorPath: path.join(SKILL_DIR, "container_tools", "inspect_presentation_layout_geometry.py"),
   layoutArgs: [
     "--expected-aspect", "16:9",
-    "--expected-slide-count", "15",
+    "--expected-slide-count", "16",
     "--expected-slide-size-emu", expectedSlideSizeEmu,
     "--validate-heading-fit",
     ...requirements.requiredNativeTableOwnerSlides.flatMap((number) => ["--require-native-table-slide", String(number)]),
