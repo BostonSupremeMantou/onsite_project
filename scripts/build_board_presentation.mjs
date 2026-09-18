@@ -182,9 +182,9 @@ function addSlide(title, kicker) {
   addText(slide, title, {
     left: 64,
     top: 88,
-    width: 780,
+    width: 980,
     height: 70,
-  }, { fontSize: 36, bold: true, color: C.ink });
+  }, { fontSize: 34, bold: true, color: C.ink });
   slide.shapes.add({
     geometry: "line",
     position: { left: 64, top: 162, width: 1030, height: 0 },
