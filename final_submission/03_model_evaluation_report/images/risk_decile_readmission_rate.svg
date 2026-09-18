@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720">
+<rect width="100%" height="100%" fill="#ffffff"/>
+<style>
+.title{font-family:Arial,Helvetica,sans-serif;font-size:30px;font-weight:700;fill:#0f172a}
+.subtitle{font-family:Arial,Helvetica,sans-serif;font-size:16px;fill:#475569}
+.label{font-family:Arial,Helvetica,sans-serif;font-size:15px;fill:#334155}
+.small{font-family:Arial,Helvetica,sans-serif;font-size:13px;fill:#64748b}
+.value{font-family:Arial,Helvetica,sans-serif;font-size:15px;font-weight:700;fill:#0f172a}
+.kpi{font-family:Arial,Helvetica,sans-serif;font-size:34px;font-weight:700;fill:#0f172a}
+</style>
+<text x="48" y="52" class="title">Observed Readmission Rate By Model Risk Decile</text>
+<text x="48" y="82" class="subtitle">Higher deciles should receive earlier review and targeted intervention.</text>
+<line x1="90" y1="615" x2="1130" y2="615" stroke="#334155" stroke-width="1.5"/>
+<rect x="111.8" y="549.8" width="60.3" height="65.2" rx="5" fill="#0f766e"/>
+<text x="142.0" y="539.8" text-anchor="middle" class="value">11.8%</text>
+<text x="142.0" y="639" text-anchor="middle" class="small">1</text>
+<rect x="215.8" y="500.2" width="60.3" height="114.8" rx="5" fill="#0f766e"/>
+<text x="246.0" y="490.2" text-anchor="middle" class="value">20.8%</text>
+<text x="246.0" y="639" text-anchor="middle" class="small">2</text>
+<rect x="319.8" y="473.1" width="60.3" height="141.9" rx="5" fill="#0f766e"/>
+<text x="350.0" y="463.1" text-anchor="middle" class="value">25.8%</text>
+<text x="350.0" y="639" text-anchor="middle" class="small">3</text>
+<rect x="423.8" y="447.8" width="60.3" height="167.2" rx="5" fill="#0f766e"/>
+<text x="454.0" y="437.8" text-anchor="middle" class="value">30.3%</text>
+<text x="454.0" y="639" text-anchor="middle" class="small">4</text>
+<rect x="527.8" y="413.9" width="60.3" height="201.1" rx="5" fill="#0f766e"/>
+<text x="558.0" y="403.9" text-anchor="middle" class="value">36.5%</text>
+<text x="558.0" y="639" text-anchor="middle" class="small">5</text>
+<rect x="631.8" y="357.4" width="60.3" height="257.6" rx="5" fill="#0f766e"/>
+<text x="662.0" y="347.4" text-anchor="middle" class="value">46.8%</text>
+<text x="662.0" y="639" text-anchor="middle" class="small">6</text>
+<rect x="735.8" y="329.4" width="60.3" height="285.6" rx="5" fill="#0f766e"/>
+<text x="766.0" y="319.4" text-anchor="middle" class="value">51.8%</text>
+<text x="766.0" y="639" text-anchor="middle" class="small">7</text>
+<rect x="839.8" y="297.2" width="60.3" height="317.8" rx="5" fill="#0f766e"/>
+<text x="870.0" y="287.2" text-anchor="middle" class="value">57.7%</text>
+<text x="870.0" y="639" text-anchor="middle" class="small">8</text>
+<rect x="943.8" y="239.4" width="60.3" height="375.6" rx="5" fill="#0f766e"/>
+<text x="974.0" y="229.4" text-anchor="middle" class="value">68.2%</text>
+<text x="974.0" y="639" text-anchor="middle" class="small">9</text>
+<rect x="1047.8" y="161.3" width="60.3" height="453.7" rx="5" fill="#0f766e"/>
+<text x="1078.0" y="151.3" text-anchor="middle" class="value">82.3%</text>
+<text x="1078.0" y="639" text-anchor="middle" class="small">10</text>
+<text x="48" y="692" class="small">Source: Cleaned NHN patient-level analysis dataset.</text>
+</svg>

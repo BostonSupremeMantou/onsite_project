@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="620" viewBox="0 0 1200 620">
+<rect width="100%" height="100%" fill="#ffffff"/>
+<style>
+.title{font-family:Arial,Helvetica,sans-serif;font-size:30px;font-weight:700;fill:#0f172a}
+.subtitle{font-family:Arial,Helvetica,sans-serif;font-size:16px;fill:#475569}
+.label{font-family:Arial,Helvetica,sans-serif;font-size:15px;fill:#334155}
+.small{font-family:Arial,Helvetica,sans-serif;font-size:13px;fill:#64748b}
+.value{font-family:Arial,Helvetica,sans-serif;font-size:15px;font-weight:700;fill:#0f172a}
+.kpi{font-family:Arial,Helvetica,sans-serif;font-size:34px;font-weight:700;fill:#0f172a}
+</style>
+<text x="48" y="52" class="title">Executive KPI Summary</text>
+<text x="48" y="82" class="subtitle">Board-ready metrics from the current analysis pass.</text>
+<rect x="48" y="128" width="340" height="130" rx="10" fill="#dbeafe" stroke="#cbd5e1"/>
+<text x="70" y="166" class="label">Patients analyzed</text>
+<text x="70" y="210" class="kpi">12,000</text>
+<text x="70" y="240" class="small">Matched across all three datasets</text>
+<rect x="423" y="128" width="340" height="130" rx="10" fill="#ccfbf1" stroke="#cbd5e1"/>
+<text x="445" y="166" class="label">Readmission rate</text>
+<text x="445" y="210" class="kpi">43.2%</text>
+<text x="445" y="240" class="small">5,184 readmitted patients</text>
+<rect x="798" y="128" width="340" height="130" rx="10" fill="#fef3c7" stroke="#cbd5e1"/>
+<text x="820" y="166" class="label">Total care cost</text>
+<text x="820" y="210" class="kpi">$303.1M</text>
+<text x="820" y="240" class="small">Nonnegative cleaned financial field</text>
+<rect x="48" y="292" width="340" height="130" rx="10" fill="#fee2e2" stroke="#cbd5e1"/>
+<text x="70" y="330" class="label">CMS penalty exposure</text>
+<text x="70" y="374" class="kpi">$21.2M</text>
+<text x="70" y="404" class="small">Nonnegative cleaned penalty field</text>
+<rect x="423" y="292" width="340" height="130" rx="10" fill="#ecfccb" stroke="#cbd5e1"/>
+<text x="445" y="330" class="label">Model ROC-AUC</text>
+<text x="445" y="374" class="kpi">0.74</text>
+<text x="445" y="404" class="small">Expanded clinical model holdout</text>
+<rect x="798" y="292" width="340" height="130" rx="10" fill="#f1f5f9" stroke="#cbd5e1"/>
+<text x="820" y="330" class="label">Expected net savings</text>
+<text x="820" y="374" class="kpi">$8.8M</text>
+<text x="820" y="404" class="small">Preliminary ROI scenario</text>
+<text x="48" y="592" class="small">Source: Cleaned NHN analysis data and project packet.</text>
+</svg>
