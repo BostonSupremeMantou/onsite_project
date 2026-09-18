@@ -1,0 +1,5 @@
+Evidence,Implication,Action
+"Observed intervention differences are associations, not causal effects.",Do not claim current interventions reduce readmissions causally.,Redesign targeting and timing before expansion claims.
+High-risk patients may receive more interventions because they are already sicker.,Selection bias can make intervention groups look worse.,Evaluate within risk deciles or staged cohorts.
+Unknown follow-up status is material.,Documentation gaps can hide operational failures.,Make follow-up status completion a dashboard KPI.
+Risk deciles 8-10 identify broad high-risk coverage.,Narrow decile-10-only pilots may miss meaningful risk.,Cover deciles 8-10 plus clinical rules.

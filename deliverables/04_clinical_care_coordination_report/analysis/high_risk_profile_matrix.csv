@@ -1,0 +1,13 @@
+Segment Type,Segment,Patients,Readmission Rate,Action Implication
+Chronic condition bucket,5+,1317,62.3%,Prioritize for high-risk workflow review
+Follow-up status,Unknown,2587,60.3%,Prioritize for high-risk workflow review
+Prior admissions bucket,3+,3225,57.0%,Prioritize for high-risk workflow review
+Discharge disposition,Skilled Nursing,1803,54.4%,Prioritize for high-risk workflow review
+Age group,85+,949,54.3%,Prioritize for high-risk workflow review
+Age group,75-84,1491,51.1%,Prioritize for high-risk workflow review
+Admission type,Emergency,7095,50.9%,Prioritize for high-risk workflow review
+Chronic condition bucket,3-4,4181,49.6%,Prioritize for high-risk workflow review
+Age group,65-74,2393,48.0%,Prioritize for high-risk workflow review
+Prior admissions bucket,2,3206,46.2%,Prioritize for high-risk workflow review
+ED visits bucket,2,3139,44.5%,Prioritize for high-risk workflow review
+Primary diagnosis,Heart Failure,2422,44.2%,Prioritize for high-risk workflow review
