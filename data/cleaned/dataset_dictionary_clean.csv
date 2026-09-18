@@ -1,0 +1,4 @@
+source_dataset,purpose,join_key
+NHN_Readmission_Consulting_Dataset.csv,Core patient-level dataset for readmission risk identification and predictive modeling.,PatientID
+NHN_Financial_Impact_Dataset.csv,"Financial dataset for estimating readmission costs, reimbursement exposure, penalties, and ROI.",PatientID
+NHN_Care_Coordination_Dataset.csv,Operational dataset for evaluating post-discharge intervention and care coordination effectiveness.,PatientID

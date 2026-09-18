@@ -1,0 +1,29 @@
+source_dataset,field,description
+NHN_Readmission_Consulting_Dataset.csv,PatientID,Unique patient identifier used to connect all NHN datasets.
+NHN_Readmission_Consulting_Dataset.csv,Age,Patient age at admission.
+NHN_Readmission_Consulting_Dataset.csv,Gender,Patient gender.
+NHN_Readmission_Consulting_Dataset.csv,InsuranceType,Primary insurance category.
+NHN_Readmission_Consulting_Dataset.csv,PrimaryDiagnosis,Primary diagnosis category associated with the admission.
+NHN_Readmission_Consulting_Dataset.csv,ChronicConditions,Number of chronic conditions recorded for the patient.
+NHN_Readmission_Consulting_Dataset.csv,PriorAdmissions12M,Number of inpatient admissions in the prior 12 months.
+NHN_Readmission_Consulting_Dataset.csv,LengthOfStayDays,Length of stay for the current admission.
+NHN_Readmission_Consulting_Dataset.csv,AdmissionType,"Emergency, urgent, or elective admission."
+NHN_Readmission_Consulting_Dataset.csv,DischargeDisposition,Patient discharge destination.
+NHN_Readmission_Consulting_Dataset.csv,EDVisits12M,Emergency department visits in the prior 12 months.
+NHN_Readmission_Consulting_Dataset.csv,FollowUpStatus,Follow-up care status after discharge.
+NHN_Readmission_Consulting_Dataset.csv,ReadmittedWithin30Days,"Target variable indicating whether the patient was readmitted within 30 days. 1 = yes, 0 = no."
+NHN_Financial_Impact_Dataset.csv,PatientID,Unique patient identifier used to connect all NHN datasets.
+NHN_Financial_Impact_Dataset.csv,ReadmissionCost,Estimated cost associated with a readmission event.
+NHN_Financial_Impact_Dataset.csv,ReimbursementAmount,Estimated reimbursement received for the care episode.
+NHN_Financial_Impact_Dataset.csv,PenaltyCost,Estimated penalty or reimbursement reduction associated with readmissions.
+NHN_Financial_Impact_Dataset.csv,LengthOfStayCost,Estimated cost associated with inpatient length of stay.
+NHN_Financial_Impact_Dataset.csv,FollowUpProgramCost,Estimated cost of post-discharge follow-up program or intervention.
+NHN_Financial_Impact_Dataset.csv,TotalCareCost,Estimated total care cost for the patient episode.
+NHN_Care_Coordination_Dataset.csv,PatientID,Unique patient identifier used to connect all NHN datasets.
+NHN_Care_Coordination_Dataset.csv,CareCoordinatorAssigned,"Indicates whether a care coordinator was assigned. 1 = yes, 0 = no."
+NHN_Care_Coordination_Dataset.csv,FollowUpCompleted,"Indicates whether post-discharge follow-up was completed. 1 = yes, 0 = no."
+NHN_Care_Coordination_Dataset.csv,FollowUpDaysAfterDischarge,Number of days between discharge and follow-up contact or visit.
+NHN_Care_Coordination_Dataset.csv,MedicationReviewCompleted,"Indicates whether medication review was completed. 1 = yes, 0 = no."
+NHN_Care_Coordination_Dataset.csv,HomeHealthReferral,"Indicates whether patient received a home health referral. 1 = yes, 0 = no."
+NHN_Care_Coordination_Dataset.csv,TransportationAssistanceProvided,"Indicates whether transportation assistance was provided. 1 = yes, 0 = no."
+NHN_Care_Coordination_Dataset.csv,PostDischargeCalls,Number of post-discharge phone calls completed.

@@ -1,0 +1,68 @@
+{
+  "row_counts": {
+    "patient_clean": 12000,
+    "financial_clean": 12000,
+    "care_clean": 12000,
+    "master_analysis": 12000
+  },
+  "unique_patient_ids": {
+    "patient_clean": 12000,
+    "financial_clean": 12000,
+    "care_clean": 12000,
+    "master_analysis": 12000
+  },
+  "missing_after_cleaning": {
+    "patient_clean": {
+      "length_of_stay_days": 240
+    },
+    "financial_clean": {
+      "penalty_cost": 240,
+      "follow_up_program_cost": 240,
+      "readmission_cost_nonnegative": 4,
+      "reimbursement_amount_nonnegative": 4,
+      "penalty_cost_nonnegative": 289,
+      "length_of_stay_cost_nonnegative": 4,
+      "follow_up_program_cost_nonnegative": 255,
+      "total_care_cost_recomputed_excluding_penalty": 263,
+      "total_care_cost_variance_from_recomputed": 263,
+      "net_reimbursement_gap": 4
+    },
+    "care_clean": {
+      "follow_up_days_after_discharge": 180,
+      "post_discharge_calls": 180
+    },
+    "master_analysis": {
+      "length_of_stay_days": 240,
+      "follow_up_days_after_discharge": 180,
+      "post_discharge_calls": 180,
+      "penalty_cost": 240,
+      "follow_up_program_cost": 240,
+      "readmission_cost_nonnegative": 4,
+      "reimbursement_amount_nonnegative": 4,
+      "penalty_cost_nonnegative": 289,
+      "length_of_stay_cost_nonnegative": 4,
+      "follow_up_program_cost_nonnegative": 255,
+      "total_care_cost_recomputed_excluding_penalty": 263,
+      "total_care_cost_variance_from_recomputed": 263,
+      "net_reimbursement_gap": 4
+    }
+  },
+  "quality_flags": {
+    "patient_rows_with_any_issue": 2964,
+    "financial_rows_with_any_issue": 550,
+    "care_rows_with_any_issue": 356,
+    "master_rows_with_any_issue": 3620
+  },
+  "target_distribution": {
+    "0": 6816,
+    "1": 5184
+  },
+  "financial_negative_counts": {
+    "readmission_cost": 4,
+    "reimbursement_amount": 4,
+    "penalty_cost": 49,
+    "length_of_stay_cost": 4,
+    "follow_up_program_cost": 15,
+    "total_care_cost": 0
+  }
+}
