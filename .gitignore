@@ -9,3 +9,5 @@ __pycache__/
 .codex-finalizer/
 .chart-data-*/
 deliverables/07_executive_board_presentation/final/preview/contact_sheet.png
+*.inspect.ndjson
+deliverables/06_executive_dashboard/final/previous_*

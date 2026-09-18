@@ -14,6 +14,7 @@
 - [x] Preliminary care coordination effectiveness analysis assets generated.
 - [x] Preliminary financial impact and ROI scenario assets generated.
 - [x] Tableau or Power BI dashboard-ready data and build guide created.
+- [x] Tableau-first dashboard build package workbook created.
 - [x] Deliverable workspace folders and templates created.
 - [ ] Native Tableau or Power BI dashboard completed.
 - [x] Final Board presentation completed.
@@ -274,6 +275,7 @@ Status:
 - [x] Dashboard KPI definitions created.
 - [x] Dashboard wireframe created.
 - [x] Tableau or Power BI build guide created.
+- [x] Tableau-first dashboard build package workbook created.
 - [ ] Native Tableau or Power BI build needed.
 - [ ] Dashboard screenshots needed after native dashboard build.
 - [x] Dashboard walkthrough script drafted.

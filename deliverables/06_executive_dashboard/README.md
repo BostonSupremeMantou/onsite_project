@@ -2,7 +2,7 @@
 
 ## Purpose
 
-Create a Tableau or Power BI dashboard that supports executive decision-making across clinical, financial, and care coordination performance.
+Create a Tableau-first dashboard that supports presentation-oriented executive decision-making across clinical, financial, and care coordination performance.
 
 ## Required Dashboard Sections
 
@@ -19,7 +19,9 @@ Create a Tableau or Power BI dashboard that supports executive decision-making a
 - `sections/08_executive_dashboard_walkthrough/data/dashboard_measure_definitions.csv`
 - `sections/08_executive_dashboard_walkthrough/notes/tableau_powerbi_build_guide.md`
 - `sections/08_executive_dashboard_walkthrough/images/dashboard_wireframe.svg`
+- `final/nhn_dashboard_build_package.xlsx`
+- `final/tableau_dashboard_build_guide.md`
 
 ## Output Target
 
-Place the native Tableau workbook, packaged Tableau workbook, or Power BI file in `final/`. Put screenshots in `images/`.
+Place the native Tableau workbook or packaged Tableau workbook in `final/` after building it in Tableau Desktop. Put screenshots in `images/`.
