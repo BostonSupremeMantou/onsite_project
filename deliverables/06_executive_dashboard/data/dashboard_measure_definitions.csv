@@ -1,0 +1,7 @@
+measure,definition,recommended_visual
+Readmission Rate,SUM(readmitted_within_30_days) / COUNT(patient_id),KPI card and trend or segment bar
+High-Risk Patients,"COUNT(patient_id) where risk_decile is 8, 9, or 10",KPI card and patient segment table
+Total Care Cost,SUM(total_care_cost_nonnegative),KPI card and cost component chart
+CMS Penalties,SUM(penalty_cost_nonnegative),KPI card and penalty segment chart
+ROI,net_savings / implementation_cost_assumption from roi_scenarios.csv,Scenario bar chart
+Intervention Completion,"AVG(follow_up_completed), AVG(medication_review_completed), and related binary fields",Care coordination bar chart

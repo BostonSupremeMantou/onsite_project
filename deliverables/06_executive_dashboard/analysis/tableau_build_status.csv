@@ -1,0 +1,7 @@
+Component,Status,Location
+Dashboard-ready extract,Complete,data/dashboard_ready_extract.csv
+KPI definitions,Complete,data/dashboard_measure_definitions.csv
+Build workbook,Complete,final/nhn_dashboard_build_package.xlsx
+Tableau build guide,Complete,final/tableau_dashboard_build_guide.md
+Native Tableau workbook,Not complete in repository,Requires Tableau Desktop
+Native dashboard screenshots,Not complete in repository,Requires Tableau Desktop export
