@@ -45,10 +45,16 @@ def copy_asset(source_rel: str, destination: Path) -> str:
 
 def money(value: float) -> str:
     value = float(value)
+    def compact(amount: float) -> str:
+        text = f"{amount:.2f}"
+        if text.endswith("00"):
+            return f"{amount:.1f}"
+        return text.rstrip("0").rstrip(".")
+
     if abs(value) >= 1_000_000:
-        return f"${value / 1_000_000:.1f}M"
+        return f"${compact(value / 1_000_000)}M"
     if abs(value) >= 1_000:
-        return f"${value / 1_000:.1f}K"
+        return f"${compact(value / 1_000)}K"
     return f"${value:,.0f}"
 
 
@@ -388,7 +394,7 @@ def populate_financial_report() -> None:
             "Avoided Readmissions": int(row["avoided_readmissions"]),
             "Gross Savings": money(row["gross_savings"]),
             "Net Savings": money(row["net_savings"]),
-            "ROI": f"{row['roi']:.2f}x",
+            "ROI": f"{float(row['roi']):.2f}x",
         }
         for row in roi
     ])

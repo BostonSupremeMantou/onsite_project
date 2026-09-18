@@ -1,0 +1,4 @@
+Scenario,Readmission Reduction,Implementation Cost,Avoided Readmissions,Gross Savings,Net Savings,ROI
+Conservative,5.0%,$1.0M,259,$5.28M,$4.28M,4.28x
+Expected,10.0%,$1.75M,518,$10.56M,$8.81M,5.03x
+Optimistic,15.0%,$2.5M,778,$15.86M,$13.36M,5.34x
