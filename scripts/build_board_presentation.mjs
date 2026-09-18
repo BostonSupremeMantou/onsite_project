@@ -496,9 +496,9 @@ const presentation = Presentation.create({
   addMetric(slide, "Penalty Exposure", kpiMap.get("CMS penalty exposure in cleaned dataset").display_value, { left: 616, top: 188, width: 250, height: 126 }, C.red, "Nonnegative exposure");
   addMetric(slide, "Expected ROI", `${num(expectedRoi.roi).toFixed(2)}x`, { left: 892, top: 188, width: 250, height: 126 }, C.green, `${moneyM(expectedRoi.net_savings)} net savings`);
   addBullets(slide, [
-    "Prioritize emergency admissions, skilled nursing discharges, high chronic-condition burden, and repeat admissions.",
-    "Use an explainable pre-discharge risk score so care teams can intervene before patients leave the hospital.",
-    "Build the executive dashboard in Tableau or Power BI using the prepared extract and KPI definitions.",
+    "Use separate clinical quality, financial, capacity, care coordination, and data quality lenses for the readmission problem.",
+    "Cover deciles 8-10 and other high-risk clinical groups rather than narrowing the pilot to one minimum segment.",
+    "Build the executive dashboard in Tableau first using the prepared extract, KPI definitions, and validation checks.",
   ], 82, 372, 1000, { gap: 58, fontSize: 20, markerColor: C.teal });
   setNotes(slide, "The summary combines clinical, financial, and operating findings into the Board-level decision path.");
 }
@@ -575,7 +575,7 @@ const presentation = Presentation.create({
 
 // 6. Predictive modeling results
 {
-  const slide = addSlide("Expanded Clinical Model Improves Risk Detection", "Predictive modeling");
+  const slide = addSlide("Use A Staged Modeling Approach", "Predictive modeling");
   const metrics = ["accuracy", "precision", "recall", "f1_score", "roc_auc"];
   const metricLabels = ["Accuracy", "Precision", "Recall", "F1", "ROC-AUC"];
   const chart = slide.charts.add("bar", {
@@ -614,7 +614,13 @@ const presentation = Presentation.create({
     { mode: "fr", value: 1.8 },
     { mode: "fr", value: 0.9 },
   ]);
-  setNotes(slide, "The model is not positioned as a black box. It is explainable and aligns with clinical expectations.");
+  addText(slide, "Use model output as one layer in a broader risk workflow, not as the only decision rule.", {
+    left: 734,
+    top: 548,
+    width: 420,
+    height: 44,
+  }, { fontSize: 17, bold: true, color: C.teal, alignment: "center" });
+  setNotes(slide, "The model is not positioned as a single decision engine. Use staged risk scoring, clinical rules, and operational review to balance recall and precision.");
 }
 
 // 7. Risk stratification
@@ -633,7 +639,7 @@ const presentation = Presentation.create({
     bold: true,
     color: C.navy,
   });
-  addText(slide, "Start with deciles 8-10 for enhanced discharge review, then tune capacity thresholds with care coordination leadership.", {
+  addText(slide, "Start with deciles 8-10 plus clinical rules for repeat admissions, chronic burden, emergency admission, and skilled nursing discharge.", {
     left: 904,
     top: 262,
     width: 230,
@@ -644,28 +650,36 @@ const presentation = Presentation.create({
     bold: true,
     color: C.blue,
   });
-  setNotes(slide, "Risk deciles turn the model into an operational queue for discharge planning and care coordination.");
+  setNotes(slide, "Risk deciles turn the model into an operational queue, but coverage should be broad and supported by clinical rules rather than a narrow decile-10-only pilot.");
 }
 
 // 8. Care coordination
 {
-  const slide = addSlide("Care Coordination Results Need Causal Caution", "Care coordination");
+  const slide = addSlide("Redesign Targeting And Timing", "Care coordination");
   const sortedInterventions = interventions
     .slice()
     .sort((a, b) => num(b.observed_difference_pp) - num(a.observed_difference_pp));
+  const interventionLabel = (name) => ({
+    "Medication review completed": "Medication review",
+    "Any post-discharge call": "Post-discharge call",
+    "Care coordinator assigned": "Coordinator",
+    "Follow-up completed": "Follow-up",
+    "Transportation assistance": "Transport",
+    "Home health referral": "Home health",
+  })[name] ?? name;
   addBarChart(
     slide,
     { left: 72, top: 166, width: 650, height: 360 },
-    sortedInterventions.map((row) => row.intervention.replace(" assistance", "")),
+    sortedInterventions.map((row) => interventionLabel(row.intervention)),
     sortedInterventions.map((row) => num(row.observed_difference_pp)),
     { title: "Observed readmission difference with intervention", fill: C.amber, numberFormatCode: "0.0%", max: 0.04, min: -0.01, axisFontSize: 8 },
   );
   addBullets(slide, [
     "Observed differences are associations, not causal estimates.",
-    "Higher-risk patients may receive more support, which can lift raw intervention readmission rates.",
-    "Priority should be timing, targeting, and completion for patients with high pre-discharge risk.",
+    "Selection bias strengthens the case for better targeting and earlier intervention timing.",
+    "Priority should be broad high-risk coverage, completion tracking, and redesign of intervention assignment rules.",
   ], 790, 180, 360, { gap: 94, fontSize: 19, markerColor: C.amber });
-  setNotes(slide, "Do not overclaim intervention effectiveness. Recommend better targeting and evaluation instead.");
+  setNotes(slide, "Keep the causal caveat visible, then make the stronger operational point: NHN should redesign targeting, timing, and intervention completion for high-risk patients.");
 }
 
 // 9. Financial impact
@@ -707,7 +721,7 @@ const presentation = Presentation.create({
   const slide = addSlide("Dashboard Build Plan", "Executive dashboard");
   addNativeTable(slide, [
     ["Page", "Purpose", "Primary visuals"],
-    ["Executive KPI Summary", "Board-level status", "KPI cards, risk decile chart, recommendation table"],
+    ["Executive KPI Summary", "Presentation-level status", "KPI cards, risk decile chart, recommendation table"],
     ["Clinical Analytics", "Risk drivers", "Age, diagnosis, chronic burden, prior admissions"],
     ["Financial Analytics", "Cost exposure", "Cost components, penalty exposure, ROI scenarios"],
     ["Care Coordination", "Operational execution", "Intervention completion and follow-up timing"],
@@ -717,9 +731,9 @@ const presentation = Presentation.create({
     { mode: "fr", value: 1.4 },
     { mode: "fr", value: 2.1 },
   ]);
-  addMetric(slide, "Required tool", "Tableau or Power BI", { left: 920, top: 192, width: 250, height: 128 }, C.blue, "Build package included");
+  addMetric(slide, "Required tool", "Tableau first", { left: 920, top: 192, width: 250, height: 128 }, C.blue, "Power BI backup path");
   addMetric(slide, "Dashboard rows", "12,000", { left: 920, top: 346, width: 250, height: 128 }, C.teal, "One row per patient");
-  addText(slide, "Use dashboard_ready_extract.csv plus the KPI and measure definition files in section 08.", {
+  addText(slide, "Use dashboard_ready_extract.csv plus the Tableau build package and validation checks in deliverable 06.", {
     left: 920,
     top: 510,
     width: 250,
@@ -821,11 +835,12 @@ const presentation = Presentation.create({
 {
   const slide = addSlide("Board Decision Points", "Close");
   addBullets(slide, [
-    "Approve a pilot for pre-discharge readmission risk scoring.",
-    "Approve dashboard development in Tableau or Power BI.",
+    "Approve a broad high-risk readmission reduction pilot covering deciles 8-10 and clinical-rule segments.",
+    "Approve staged model governance so no single model carries the full healthcare decision risk.",
+    "Approve Tableau dashboard development for presentation and executive review.",
     "Approve follow-up documentation workflow improvements.",
     "Validate implementation cost assumptions for ROI tracking.",
-  ], 116, 182, 900, { gap: 88, fontSize: 24, markerColor: C.green });
+  ], 116, 174, 900, { gap: 70, fontSize: 22, markerColor: C.green });
   addShape(slide, { left: 116, top: 558, width: 980, height: 64 }, "#ECFDF5", { style: "solid", fill: "#BBF7D0", width: 1 });
   addText(slide, "Recommended decision: fund the 0-3 month pilot and dashboard build, then review ROI monthly.", {
     left: 146,

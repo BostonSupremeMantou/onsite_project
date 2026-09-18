@@ -11,6 +11,7 @@ Subtitle: Clinical analytics, financial impact, care coordination, and 12-month 
 - NHN's analytical sample readmission rate is 43.2%.
 - The highest-risk groups include older patients, patients with more chronic conditions, patients with repeated prior admissions, emergency admissions, and skilled nursing discharges.
 - The expanded clinical model reached ROC-AUC 0.74.
+- The recommendation uses separate clinical, financial, capacity, care coordination, and data quality lenses rather than one single emphasis.
 - The expected financial scenario estimates $8.8M in net savings before implementation cost validation.
 
 ## Slide 3: Business Problem
@@ -36,13 +37,16 @@ Subtitle: Clinical analytics, financial impact, care coordination, and 12-month 
 - The baseline model uses numeric clinical variables.
 - The expanded model adds categorical clinical and discharge variables.
 - The expanded model performs better and remains explainable for leadership.
+- NHN should use a staged model and clinical-rule workflow rather than one model as the sole decision engine.
+- Risk scoring should support broad high-risk coverage, especially deciles 8-10 and clinically elevated segments.
 - Largest drivers include emergency admission, skilled nursing discharge, prior admissions, chronic conditions, length of stay, and age.
 
 ## Slide 7: Care Coordination Analysis
 
 - Intervention comparisons show observed association, not causal impact.
-- High-risk patients may receive more support, which can make raw intervention rates difficult to interpret.
-- NHN should evaluate whether interventions reach the highest-risk patients early enough.
+- Selection bias makes raw intervention comparisons difficult to interpret.
+- NHN should redesign targeting and timing so interventions reach high-risk patients earlier and more consistently.
+- Intervention completion should be tracked as part of the dashboard.
 
 ## Slide 8: Financial Impact Analysis
 
@@ -52,7 +56,7 @@ Subtitle: Clinical analytics, financial impact, care coordination, and 12-month 
 
 ## Slide 9: Dashboard Walkthrough
 
-- Executive KPI Summary.
+- Executive KPI Summary for presentation-level status.
 - Clinical Analytics.
 - Financial Analytics.
 - Care Coordination Analytics.
@@ -60,7 +64,7 @@ Subtitle: Clinical analytics, financial impact, care coordination, and 12-month 
 
 ## Slide 10: Strategic Recommendations
 
-- Deploy a pre-discharge readmission risk score: Expanded clinical model ROC-AUC is 0.74 and risk deciles separate observed readmission rates.
+- Deploy a staged readmission risk workflow: Expanded clinical model ROC-AUC is 0.74 and risk deciles separate observed readmission rates, but model output should be combined with clinical rules and review.
 - Prioritize emergency admissions and skilled nursing discharges for enhanced discharge review: Emergency admissions and skilled nursing discharges show elevated readmission rates.
 - Close follow-up documentation and completion gaps: Unknown follow-up status has the highest observed readmission rate and 2,587 records lack follow-up status.
 - Target care coordination resources to high-risk chronic disease and prior-admission groups: Patients with 5+ chronic conditions and 3+ prior admissions show materially higher readmission rates.
@@ -77,7 +81,7 @@ Subtitle: Clinical analytics, financial impact, care coordination, and 12-month 
 ## Slide 12: Implementation Roadmap
 
 - 0-3 months: Approve dashboard KPIs, risk model governance, and readmission reduction targets.
-- 0-3 months: Pilot pre-discharge risk scoring for emergency admissions and skilled nursing discharges.
+- 0-3 months: Pilot broad high-risk coverage using deciles 8-10, emergency admissions, skilled nursing discharges, chronic disease burden, and prior admissions.
 - 0-3 months: Fix follow-up status documentation workflow and missing-value monitoring.
 - 3-6 months: Expand targeted care coordination for high-risk chronic disease and prior-admission groups.
 - 3-6 months: Build Tableau or Power BI dashboard using the prepared dashboard extract.
@@ -95,8 +99,9 @@ Subtitle: Clinical analytics, financial impact, care coordination, and 12-month 
 
 ## Slide 14: Board Decision Points
 
-- Approve a pilot for pre-discharge risk scoring.
-- Approve dashboard development in Tableau or Power BI.
+- Approve a broad high-risk readmission reduction pilot.
+- Approve staged model governance across scoring, clinical rules, and care team review.
+- Approve dashboard development in Tableau.
 - Approve follow-up documentation improvements.
 - Validate implementation cost assumptions for ROI tracking.
 
