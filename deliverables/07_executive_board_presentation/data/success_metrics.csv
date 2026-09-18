@@ -1,0 +1,7 @@
+dimension,metric,target_direction,source
+Clinical,Readmission rate,Decrease,Dashboard extract
+Clinical,High-risk patient intervention completion,Increase,Care coordination data
+Financial,CMS penalty exposure,Decrease,Financial impact data
+Financial,Net savings,Increase,ROI scenario model
+Operational,Unknown follow-up status rate,Decrease,Patient readmission data
+Analytics,Model ROC-AUC and recall,Maintain or improve,Model evaluation

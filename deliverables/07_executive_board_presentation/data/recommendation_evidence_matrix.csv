@@ -1,0 +1,6 @@
+recommendation,short_label,evidence,impact_score,effort_score,priority,timeframe
+Deploy a pre-discharge readmission risk score,Risk score,Expanded clinical model ROC-AUC is 0.74 and risk deciles separate observed readmission rates.,5,3,High,0-3 months
+Prioritize emergency admissions and skilled nursing discharges for enhanced discharge review,Discharge review,Emergency admissions and skilled nursing discharges show elevated readmission rates.,4,3,High,0-3 months
+Close follow-up documentation and completion gaps,Follow-up gaps,"Unknown follow-up status has the highest observed readmission rate and 2,587 records lack follow-up status.",4,2,High,0-3 months
+Target care coordination resources to high-risk chronic disease and prior-admission groups,Targeted care,Patients with 5+ chronic conditions and 3+ prior admissions show materially higher readmission rates.,5,4,High,3-6 months
+Launch an executive readmission dashboard,Dashboard,"The project requires integrated clinical, financial, and operational reporting for executive decisions.",3,2,Medium,3-6 months

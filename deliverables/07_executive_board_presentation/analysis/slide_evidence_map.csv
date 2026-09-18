@@ -1,0 +1,16 @@
+Slide,Topic,Primary Evidence,Source File
+1,Title,Project scope and NHN readmission context,final/executive_board_presentation_content.md
+2,Executive Summary,"KPI baseline, steering decisions, expected ROI",data/executive_kpis.csv
+3,Business Problem,Historical readmission trend and $42M cost exposure,sections/02_business_problem/data/business_problem_metrics.csv
+4,Data Overview,"12,000 matched patients and data quality issues",sections/03_data_overview/data/data_quality_summary.csv
+5,Clinical Analysis,High-risk clinical segments,sections/04_clinical_analysis/data/clinical_readmission_segments.csv
+6,Predictive Modeling,Model metrics and staged workflow,data/model_metrics.csv
+7,Risk Stratification,Readmission by risk decile,data/risk_score_deciles.csv
+8,Care Coordination,Observed intervention associations and redesign conclusion,sections/06_care_coordination_analysis/data/intervention_effectiveness_summary.csv
+9,Financial Impact,Cost components and penalty exposure,sections/07_financial_impact_analysis/data/financial_cost_components.csv
+10,Dashboard Walkthrough,Tableau-first build package,deliverables/06_executive_dashboard/final/tableau_dashboard_build_guide.md
+11,Recommendations,Recommendation evidence matrix,data/recommendation_evidence_matrix.csv
+12,ROI,Scenario model,data/roi_scenarios.csv
+13,Implementation,12-month roadmap,data/implementation_roadmap.csv
+14,Governance,Success metrics,data/success_metrics.csv
+15,Decision Points,Steering decisions and recommendations,PROJECT_STEERING_DECISIONS.md
