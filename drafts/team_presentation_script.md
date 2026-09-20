@@ -9,6 +9,8 @@ Total target time: 12-13 minutes, with 2-3 minutes left for transitions or quest
 Slide 1: National Hospital Network project charter  
 Target time: 1.5 minutes
 
+![Slide 1 - National Hospital Network project charter](team_presentation_script_images/slide-1.png)
+
 Good morning everyone. We are Meds Counsulting LLC, and today we are presenting our readmission analytics project for National Hospital Network, or NHN.
 
 NHN is a large integrated healthcare system with 42 hospitals, more than 300 outpatient sites, operations across 11 states, and about 2.3 million patients served each year. Because of that scale, even a small increase in readmissions can create a major clinical, operational, and financial challenge.
@@ -24,6 +26,8 @@ I will now hand it over to Belal to walk through the initial data analysis.
 Slide 2: Data analysis snapshot  
 Target time: 1.5 minutes
 
+![Slide 2 - Data analysis snapshot](team_presentation_script_images/slide-2.png)
+
 Thank you, Can. For the data analysis, we started by checking the quality and structure of the dataset before moving into deeper modeling.
 
 We analyzed 12,000 patients, and the overall 30-day readmission rate in the cleaned data is 43.2 percent. The first important data issue is missing follow-up status. Follow-up status is missing for 2,587 patients, or 21.6 percent of the dataset. This matters because follow-up status is directly connected to the care transition process.
@@ -36,7 +40,7 @@ Next, Jingyi will explain what the data shows from a clinical risk perspective.
 
 ## 3. Jingyi Cao - Clinical Risk Analysis
 
-Slide 2 and Slide 4: Clinical risk patterns and business insights  
+Stay on Slide 2: Clinical risk patterns  
 Target time: 1.5 minutes
 
 Building on the data review, the clinical risk patterns show that readmission risk is not evenly distributed across patients.
@@ -56,6 +60,8 @@ Now Santosh will explain the analytical approach and modeling logic.
 Slide 3: Analytical approach  
 Target time: 1.5 minutes
 
+![Slide 3 - Analytical approach](team_presentation_script_images/slide-3.png)
+
 Thank you, Jingyi. Our analytical approach has three main parts: regression analysis, customer segmentation, and market basic analysis.
 
 First, regression analysis helps us quantify which factors are associated with readmission. This is important because many risk factors overlap. For example, older patients may also have more chronic conditions, more prior admissions, or longer hospital stays. Regression helps us understand which variables still matter after accounting for that overlap.
@@ -70,8 +76,10 @@ Next, Jeevan will connect these insights to business value and ROI.
 
 ## 5. Jeevan-Kumar Mittapalli - Financial Impact and ROI
 
-Slide 4 and Slide 5: Business value, cost, and expected benefits  
+Slide 4: Business insights  
 Target time: 1.5 minutes
+
+![Slide 4 - Business insights](team_presentation_script_images/slide-4.png)
 
 Thank you, Santosh. From a business perspective, the main question is whether the analysis can lead to measurable value for NHN.
 
@@ -87,6 +95,8 @@ Now Adarsh will explain how these recommendations can be implemented operational
 
 Slide 5: Recommendations and implementation timeline  
 Target time: 1.5 minutes
+
+![Slide 5 - Recommendations](team_presentation_script_images/slide-5.png)
 
 Thank you, Jeevan. The recommendations are organized into short-term actions and long-term strategy.
 
@@ -104,6 +114,8 @@ Finally, Sam will cover ethical considerations and responsible use.
 
 Slide 6: Ethical considerations  
 Target time: 1.5 minutes
+
+![Slide 6 - Ethical considerations](team_presentation_script_images/slide-6.png)
 
 Thank you, Adarsh. The final slide focuses on ethical considerations because a readmission model affects patient care decisions.
 
